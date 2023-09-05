@@ -1,0 +1,96 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/matrix_transform.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
+
+#define L_BASE 0
+#define L_NUMSYM 1
+#define L_NAV 2
+#define L_EXTRA 3
+#define L_GAME 4
+
+/ {
+    chosen {
+        zmk,matrix_transform = &five_column_transform;
+    };
+
+    behaviors {
+        as: auto_shift {
+            compatible = "zmk,behavior-hold-tap";
+            label = "AUTO_SHIFT";
+            #binding-cells = <2>;
+            tapping_term_ms = <135>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings =
+                <&kp>,
+                <&kp>;
+        };
+        u_bootloader: u_bootloader {
+            compatible = "zmk,behavior-tap-dance";
+            label = "U_BOOTLOADER";
+            #binding-cells = <0>;
+            bindings =
+                <&none>,
+                <&bootloader>;
+        };
+    };
+
+    keymap {
+        compatible = "zmk,keymap";
+
+        base_layer {
+            bindings = <
+  &kp Q       &kp W       &kp E        &kp R              &kp T      &kp Y    &kp U            &kp I        &kp O       &kp P
+  &mt LGUI A  &mt LALT S  &mt LCTRL D  &mt LSHIFT F       &kp G      &kp H    &mt LSHIFT J     &mt LCTRL K  &mt LALT L  &mt LGUI SQT
+  &kp Z       &kp X       &kp C        &kp V              &kp B      &kp N    &kp M            &kp COMMA    &kp DOT     &kp SLASH
+                          &kp ESC      &lt L_NUMSYM BSPC  &kp TAB    &kp RET  &lt L_NAV SPACE  &kp RALT
+            >;
+        };
+
+        numsym_layer {
+            bindings = <
+  &as LS(N1) N1  &as LS(N2) N2  &as LS(N3) N3  &as LS(N4) N4  &as LS(N5) N5    &as LS(N6) N6  &as LS(N7) N7  &as LS(N8) N8  &as LS(N9) N9  &as LS(N0) N0
+  &none          &none          &none          &none          &none            &none          &none          &none          &none          &as LS(SEMI) SEMI
+  &none          &none          &none          &none          &none            &none          &none          &none          &none          &none
+                                &none          &none          &none            &none          &none          &none
+            >;
+        };
+
+        nav_layer {
+            bindings = <
+  &none  &none  &none  &none  &none    &none     &none      &none      &none      &none
+  &none  &none  &none  &none  &none    &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &caps_word
+  &none  &none  &none  &none  &none    &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &none
+                &none  &none  &none    &none     &none      &none
+            >;
+        };
+
+        extra_layer {
+            bindings = <
+  &none         &none         &none         &none         &u_bootloader    &none       &kp C_BRIGHTNESS_DEC  &kp C_BRI_UP  &none       &none
+  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &bt BT_CLR       &kp C_PREV  &kp C_VOL_DN          &kp C_VOL_UP  &kp C_NEXT  &none
+  &none         &none         &none         &none         &none            &none       &none                 &none         &none       &none
+                              &none         &none         &none            &none       &none                 &none
+            >;
+        };
+
+        game_layer {
+            bindings = <
+  &kp TAB    &kp Q  &kp W    &kp E     &kp R      &kp Y    &kp U      &kp I      &kp O    &kp P
+  &kp LSHFT  &kp A  &kp S    &kp D     &kp F      &kp H    &kp J      &kp K      &kp L    &kp SQT
+  &kp LCTRL  &kp Z  &kp X    &kp C     &kp V      &kp N    &kp M      &kp COMMA  &kp DOT  &kp SLASH
+                    &kp ESC  &kp BSPC  &kp TAB    &kp RET  &kp SPACE  &to 0
+            >;
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        extra {
+            if-layers = <1 2>;
+            then-layer = <3>;
+        };
+    };
+};
