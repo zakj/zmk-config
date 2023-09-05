@@ -26,6 +26,17 @@
                 <&kp>,
                 <&kp>;
         };
+        hm: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+            bindings =
+                <&kp>,
+                <&kp>;
+        };
         u_bootloader: u_bootloader {
             compatible = "zmk,behavior-tap-dance";
             label = "U_BOOTLOADER";
@@ -33,6 +44,14 @@
             bindings =
                 <&none>,
                 <&bootloader>;
+        };
+        u_bt_clr: u_bt_clr {
+            compatible = "zmk,behavior-tap-dance";
+            label = "U_BT_CLR";
+            #binding-cells = <0>;
+            bindings =
+                <&none>,
+                <&bt BT_CLR>;
         };
     };
 
@@ -42,7 +61,7 @@
         base_layer {
             bindings = <
   &kp Q       &kp W       &kp E        &kp R              &kp T      &kp Y    &kp U            &kp I        &kp O       &kp P
-  &mt LGUI A  &mt LALT S  &mt LCTRL D  &mt LSHIFT F       &kp G      &kp H    &mt LSHIFT J     &mt LCTRL K  &mt LALT L  &mt LGUI SQT
+  &hm LGUI A  &hm LALT S  &hm LCTRL D  &hm LSHIFT F       &kp G      &kp H    &hm LSHIFT J     &hm LCTRL K  &hm LALT L  &hm LGUI SQT
   &kp Z       &kp X       &kp C        &kp V              &kp B      &kp N    &kp M            &kp COMMA    &kp DOT     &kp SLASH
                           &kp ESC      &lt L_NUMSYM BSPC  &kp TAB    &kp RET  &lt L_NAV SPACE  &kp RALT
             >;
@@ -53,25 +72,25 @@
   &as LS(N1) N1  &as LS(N2) N2  &as LS(N3) N3  &as LS(N4) N4  &as LS(N5) N5    &as LS(N6) N6  &as LS(N7) N7  &as LS(N8) N8  &as LS(N9) N9  &as LS(N0) N0
   &none          &none          &none          &none          &none            &none          &none          &none          &none          &as LS(SEMI) SEMI
   &none          &none          &none          &none          &none            &none          &none          &none          &none          &none
-                                &none          &none          &none            &none          &none          &none
+                                &trans         &none          &trans           &trans         &trans         &trans
             >;
         };
 
         nav_layer {
             bindings = <
-  &none  &none  &none  &none  &none    &none     &none      &none      &none      &none
-  &none  &none  &none  &none  &none    &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &caps_word
-  &none  &none  &none  &none  &none    &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &none
-                &none  &none  &none    &none     &none      &none
+  &none  &none  &none   &none   &none     &kp LS(LG(LEFT_BRACKET))  &none      &none      &kp LS(LG(RBKT))  &none
+  &none  &none  &none   &none   &none     &kp LEFT                  &kp DOWN   &kp UP     &kp RIGHT         &caps_word
+  &none  &none  &none   &none   &none     &kp HOME                  &kp PG_DN  &kp PG_UP  &kp END           &none
+                &trans  &trans  &trans    &trans                    &none      &trans
             >;
         };
 
         extra_layer {
             bindings = <
-  &none         &none         &none         &none         &u_bootloader    &none       &kp C_BRIGHTNESS_DEC  &kp C_BRI_UP  &none       &none
-  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &bt BT_CLR       &kp C_PREV  &kp C_VOL_DN          &kp C_VOL_UP  &kp C_NEXT  &none
-  &none         &none         &none         &none         &none            &none       &none                 &none         &none       &none
-                              &none         &none         &none            &none       &none                 &none
+  &none         &none         &none         &none         &u_bootloader    &none       &kp C_BRI_DEC  &kp C_BRI_UP  &none       &none
+  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &u_bt_clr        &kp C_PREV  &kp C_VOL_DN   &kp C_VOL_UP  &kp C_NEXT  &none
+  &none         &none         &none         &none         &none            &none       &none          &none         &none       &none
+                              &none         &none         &none            &none       &none          &none
             >;
         };
 
