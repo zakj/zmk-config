@@ -1,5 +1,7 @@
 # crkbd keymap
 
+![](keymap-drawer/corne.svg)
+
 Ideas borrowed from [Miryoku][] and [Evan Travers][].
 Thanks also to [Nick Coutsos][] for his invaluable [Keymap Editor][].
 
