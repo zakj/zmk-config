@@ -1,0 +1,151 @@
+layout: {qmk_keyboard: corne_rotated, qmk_layout: LAYOUT_split_3x5_3}
+layers:
+  base:
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - {t: A, h: LSHIFT}
+  - {t: S, h: LALT}
+  - {t: D, h: LCTRL}
+  - {t: F, h: LGUI}
+  - G
+  - H
+  - {t: J, h: LGUI}
+  - {t: K, h: LCTRL}
+  - {t: L, h: LALT}
+  - {t: ;, h: LSHIFT}
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - N
+  - M
+  - ','
+  - .
+  - /
+  - ESC
+  - {t: BSPC, h: numsym}
+  - TAB
+  - RET
+  - {t: SPACE, h: nav}
+  - {t: '''', h: '"'}
+  numsym:
+  - {t: '1', h: LS(EXCL)}
+  - {t: '2', h: LS(AT)}
+  - {t: '3', h: LS(HASH)}
+  - {t: '4', h: LS(DLLR)}
+  - {t: '5', h: LS(PRCNT)}
+  - {t: '6', h: LS(CARET)}
+  - {t: '7', h: LS(AMPS)}
+  - {t: '8', h: LS(STAR)}
+  - {t: '9', h: LS(LPAR)}
+  - {t: '0', h: LS(RPAR)}
+  - {t: '`', h: LSHIFT}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - F18
+  - {t: '-', h: _}
+  - {t: '=', h: LGUI}
+  - {t: '[', h: LCTRL}
+  - {t: ']', h: LALT}
+  - {t: \, h: LSHIFT}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  nav:
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - LS(LG(LBKT))
+  - ''
+  - ''
+  - LS(LG(RBKT))
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ''
+  - LEFT
+  - {t: DOWN, h: LGUI}
+  - {t: UP, h: LCTRL}
+  - {t: RIGHT, h: LALT}
+  - '&caps_word'
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - HOME
+  - PG DN
+  - PG UP
+  - END
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  extra:
+  - ''
+  - ''
+  - ''
+  - ''
+  - '&u_bootloader'
+  - ''
+  - BRI DN
+  - BRI UP
+  - ''
+  - ''
+  - {t: BT, h: '3'}
+  - {t: BT, h: '2'}
+  - {t: BT, h: '1'}
+  - {t: BT, h: '0'}
+  - '&u_bt_clr'
+  - PREV
+  - VOL DN
+  - VOL UP
+  - NEXT
+  - PP
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - game
+  - ''
+  - {type: held}
+  - ''
+  - ''
+  - {type: held}
+  - ''
+  game: [TAB, Q, W, E, R, Y, U, I, O, P, LSHFT, A, S, D, F, H, J, K, L, '''', LCTRL, Z, X, C, V, N, M, ',', ., /, ESC, BSPC, TAB, RET, SPACE, base]
