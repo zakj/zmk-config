@@ -70,7 +70,7 @@
         numsym_layer {
             bindings = <
   &as LS(EXCL) N1   &as LS(AT) N2  &as LS(HASH) N3  &as LS(DLLR) N4  &as LS(PRCNT) N5    &as LS(CARET) N6  &as LS(AMPS) N7  &as LS(STAR) N8  &as LS(LPAR) N9  &as LS(RPAR) N0
-  &hm LSHIFT GRAVE  &trans         &trans           &trans           &none               &as UNDER MINUS   &hm LGUI EQUAL   &hm LCTRL LBKT   &hm LALT RBKT    &hm LSHIFT BSLH
+  &hm LSHIFT GRAVE  &trans         &trans           &trans           &kp F18             &as UNDER MINUS   &hm LGUI EQUAL   &hm LCTRL LBKT   &hm LALT RBKT    &hm LSHIFT BSLH
   &none             &none          &none            &none            &none               &none             &none            &none            &none            &none
                                    &trans           &none            &trans              &trans            &trans           &trans
             >;
