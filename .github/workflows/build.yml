@@ -1,5 +1,10 @@
 name: Build firmware
-on: [push, pull_request, workflow_dispatch]
+on:
+  workflow_dispatch:
+  pull_request:
+  push:
+    paths:
+      - "config/*"
 
 jobs:
   build:
