@@ -55,16 +55,6 @@
         };
     };
 
-    combos {
-        compatible = "zmk,combos";
-
-        extra {
-            bindings = <&mo L_EXTRA>;
-            key-positions = <31 34>;
-            layers = <L_BASE L_NUMSYM L_NAV>;
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -111,6 +101,15 @@
   &kp LCTRL  &kp Z  &kp X    &kp C     &kp V      &kp N    &kp M      &kp COMMA   &kp DOT  &kp SLASH
                     &kp ESC  &kp BSPC  &kp TAB    &kp RET  &kp SPACE  &to L_BASE
             >;
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        extra {
+            if-layers = <1 2>;
+            then-layer = <3>;
         };
     };
 };
