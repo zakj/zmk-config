@@ -1,0 +1,75 @@
+draw_config:
+  glyph_tap_size: 20
+  svg_extra_style: |
+    g.trans {
+      opacity: 0.4;
+    }
+
+parse_config:
+  raw_binding_map:
+    "&caps_word": $$tabler:arrow-big-up-line$$
+    "&u_bt_clr": $$tabler:bluetooth-x$$
+    "&bt BT_SEL 0": { t: "$$tabler:bluetooth$$", h: 0 }
+    "&bt BT_SEL 1": { t: "$$tabler:bluetooth$$", h: 1 }
+    "&bt BT_SEL 2": { t: "$$tabler:bluetooth$$", h: 2 }
+    "&bt BT_SEL 3": { t: "$$tabler:bluetooth$$", h: 3 }
+    "&u_bootloader": $$tabler:progress-down$$
+
+  zmk_keycode_map:
+    LGUI: $$mdi:apple-keyboard-command$$
+    LCTRL: $$mdi:apple-keyboard-control$$
+    LALT: $$mdi:apple-keyboard-option$$
+    LSHFT: $$mdi:apple-keyboard-shift$$
+    BSPC: $$tabler:backspace$$
+    ESC: $$mdi:keyboard-esc$$
+    RET: $$tabler:corner-down-left$$
+    SPACE: $$tabler:space$$
+    TAB: $$tabler:arrow-bar-to-right$$
+    F14: $$tabler:brightness-down$$
+    F15: $$tabler:brightness-up$$
+    F18: $$tabler:hammer$$
+    C_VOL_DN: $$tabler:volume-2$$
+    C_VOL_UP: $$tabler:volume$$
+    C_NEXT: $$tabler:player-skip-forward$$
+    C_PREV: $$tabler:player-skip-back$$
+    C_PP: $$tabler:player-play$$
+    UP: $$tabler:arrow-up$$
+    RIGHT: $$tabler:arrow-right$$
+    DOWN: $$tabler:arrow-down$$
+    LEFT: $$tabler:arrow-left$$
+    "LS(LG(LBKT))": "⌘⇧["
+    "LS(LG(RBKT))": "⌘⇧]"
+
+    # defaults
+    AMPS: "&"
+    AT: "@"
+    BSLH: \
+    CARET: ^
+    COLON: ":"
+    COMMA: ","
+    DLLR: $
+    DOT: .
+    DQT: '"'
+    EQUAL: "="
+    EXCL: "!"
+    GRAVE: "`"
+    GT: ">"
+    HASH: "#"
+    LBKT: "["
+    LBRC: "{"
+    LPAR: (
+    LT: <
+    MINUS: "-"
+    PIPE: "|"
+    PLUS: +
+    POUND: "#"
+    PRCNT: "%"
+    RBKT: "]"
+    RBRC: "}"
+    RPAR: )
+    SEMI: ;
+    SLASH: /
+    SQT: "'"
+    STAR: "*"
+    TILDE: "~"
+    UNDER: _
