@@ -11,7 +11,7 @@ layers:
   - I
   - O
   - P
-  - {t: A, h: LSHIFT}
+  - {t: A, h: LSHFT}
   - {t: S, h: LALT}
   - {t: D, h: LCTRL}
   - {t: F, h: LGUI}
@@ -20,7 +20,7 @@ layers:
   - {t: J, h: LGUI}
   - {t: K, h: LCTRL}
   - {t: L, h: LALT}
-  - {t: ;, h: LSHIFT}
+  - {t: ;, h: LSHFT}
   - Z
   - X
   - C
@@ -38,17 +38,17 @@ layers:
   - {t: SPACE, h: nav}
   - {t: '''', h: '"'}
   numsym:
-  - {t: '1', h: LS(EXCL)}
-  - {t: '2', h: LS(AT)}
-  - {t: '3', h: LS(HASH)}
-  - {t: '4', h: LS(DLLR)}
-  - {t: '5', h: LS(PRCNT)}
-  - {t: '6', h: LS(CARET)}
-  - {t: '7', h: LS(AMPS)}
-  - {t: '8', h: LS(STAR)}
-  - {t: '9', h: LS(LPAR)}
-  - {t: '0', h: LS(RPAR)}
-  - {t: '`', h: LSHIFT}
+  - {t: '1', h: '!'}
+  - {t: '2', h: '@'}
+  - {t: '3', h: '#'}
+  - {t: '4', h: $}
+  - {t: '5', h: '%'}
+  - {t: '6', h: ^}
+  - {t: '7', h: '&'}
+  - {t: '8', h: '*'}
+  - {t: '9', h: (}
+  - {t: '0', h: )}
+  - {t: '`', h: LSHFT}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -57,7 +57,7 @@ layers:
   - {t: '=', h: LGUI}
   - {t: '[', h: LCTRL}
   - {t: ']', h: LALT}
-  - {t: \, h: LSHIFT}
+  - {t: \, h: LSHFT}
   - ''
   - ''
   - ''
@@ -118,8 +118,8 @@ layers:
   - ''
   - '&u_bootloader'
   - ''
-  - BRI DN
-  - BRI UP
+  - F14
+  - F15
   - ''
   - ''
   - {t: BT, h: '3'}
