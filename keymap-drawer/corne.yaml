@@ -11,16 +11,16 @@ layers:
   - I
   - O
   - P
-  - {t: A, h: LSHFT}
-  - {t: S, h: LALT}
-  - {t: D, h: LCTRL}
-  - {t: F, h: LGUI}
+  - A
+  - S
+  - {t: D, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: F, h: '$$mdi:apple-keyboard-command$$'}
   - G
   - H
-  - {t: J, h: LGUI}
-  - {t: K, h: LCTRL}
-  - {t: L, h: LALT}
-  - {t: ;, h: LSHFT}
+  - {t: J, h: '$$mdi:apple-keyboard-command$$'}
+  - {t: K, h: '$$mdi:apple-keyboard-option$$'}
+  - L
+  - ;
   - Z
   - X
   - C
@@ -31,12 +31,12 @@ layers:
   - ','
   - .
   - /
-  - ESC
-  - {t: BSPC, h: numsym}
-  - TAB
-  - RET
-  - {t: SPACE, h: nav}
+  - numsym
+  - $$mdi:apple-keyboard-control$$
+  - LSHIFT
+  - $$tabler:space$$
   - {t: '''', h: '"'}
+  - nav
   numsym:
   - {t: '1', h: '!'}
   - {t: '2', h: '@'}
@@ -48,16 +48,16 @@ layers:
   - {t: '8', h: '*'}
   - {t: '9', h: (}
   - {t: '0', h: )}
-  - {t: '`', h: LSHFT}
+  - {t: '`', h: '$$mdi:apple-keyboard-shift$$'}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - F18
+  - $$tabler:hammer$$
   - {t: '-', h: _}
-  - {t: '=', h: LGUI}
-  - {t: '[', h: LCTRL}
-  - {t: ']', h: LALT}
-  - {t: \, h: LSHFT}
+  - {t: '=', h: '$$mdi:apple-keyboard-command$$'}
+  - {t: '[', h: '$$mdi:apple-keyboard-control$$'}
+  - {t: ']', h: '$$mdi:apple-keyboard-option$$'}
+  - {t: \, h: '$$mdi:apple-keyboard-shift$$'}
   - ''
   - ''
   - ''
@@ -68,8 +68,8 @@ layers:
   - ''
   - ''
   - ''
-  - {t: ▽, type: trans}
   - {type: held}
+  - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -80,21 +80,21 @@ layers:
   - ''
   - ''
   - ''
-  - LS(LG(LBKT))
+  - ⌘⇧[
   - ''
   - ''
-  - LS(LG(RBKT))
+  - ⌘⇧]
   - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - ''
-  - LEFT
-  - {t: DOWN, h: LGUI}
-  - {t: UP, h: LCTRL}
-  - {t: RIGHT, h: LALT}
-  - '&caps_word'
+  - $$tabler:arrow-left$$
+  - {t: '$$tabler:arrow-down$$', h: '$$mdi:apple-keyboard-command$$'}
+  - {t: '$$tabler:arrow-up$$', h: '$$mdi:apple-keyboard-control$$'}
+  - {t: '$$tabler:arrow-right$$', h: '$$mdi:apple-keyboard-option$$'}
+  - $$tabler:arrow-big-up-line$$
   - ''
   - ''
   - ''
@@ -109,29 +109,29 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - ''
   - {type: held}
-  - {t: ▽, type: trans}
   extra:
   - ''
   - ''
   - ''
   - ''
-  - '&u_bootloader'
+  - $$tabler:progress-down$$
   - ''
-  - F14
-  - F15
+  - $$tabler:brightness-down$$
+  - $$tabler:brightness-up$$
   - ''
   - ''
-  - {t: BT, h: '3'}
-  - {t: BT, h: '2'}
-  - {t: BT, h: '1'}
-  - {t: BT, h: '0'}
-  - '&u_bt_clr'
-  - PREV
-  - VOL DN
-  - VOL UP
-  - NEXT
-  - PP
+  - {t: '$$tabler:bluetooth$$', h: '3'}
+  - {t: '$$tabler:bluetooth$$', h: '2'}
+  - {t: '$$tabler:bluetooth$$', h: '1'}
+  - {t: '$$tabler:bluetooth$$', h: '0'}
+  - $$tabler:bluetooth-x$$
+  - $$tabler:player-skip-back$$
+  - $$tabler:volume-2$$
+  - $$tabler:volume$$
+  - $$tabler:player-skip-forward$$
+  - $$tabler:player-play$$
   - ''
   - ''
   - ''
@@ -142,10 +142,21 @@ layers:
   - ''
   - ''
   - game
-  - ''
   - {type: held}
   - ''
   - ''
-  - {type: held}
   - ''
-  game: [TAB, Q, W, E, R, Y, U, I, O, P, LSHFT, A, S, D, F, H, J, K, L, '''', LCTRL, Z, X, C, V, N, M, ',', ., /, ESC, BSPC, TAB, RET, SPACE, base]
+  - ''
+  - {type: held}
+  game: ['$$tabler:arrow-bar-to-right$$', Q, W, E, R, Y, U, I, O, P, '$$mdi:apple-keyboard-shift$$', A, S, D, F, H, J, K, L, '''', '$$mdi:apple-keyboard-control$$',
+    Z, X, C, V, N, M, ',', ., /, '$$mdi:keyboard-esc$$', '$$tabler:backspace$$', '$$tabler:arrow-bar-to-right$$', '$$tabler:corner-down-left$$', '$$tabler:space$$',
+    base]
+combos:
+- p: [1, 2]
+  k: $$mdi:keyboard-esc$$
+- p: [21, 22]
+  k: $$tabler:arrow-bar-to-right$$
+- p: [7, 8]
+  k: BACKSPACE
+- p: [27, 28]
+  k: ENTER
