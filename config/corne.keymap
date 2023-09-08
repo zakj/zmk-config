@@ -88,14 +88,14 @@
 
         base_layer {
             bindings = <
-  &kp Q  &kp W  &kp E       &kp R       &kp T         &kp Y      &kp U        &kp I       &kp O    &kp P
-  &kp A  &kp S  &hm LALT D  &hm LGUI F  &kp G         &kp H      &hm LGUI J   &hm LALT K  &kp L    &kp SEMI
-  &kp Z  &kp X  &kp C       &kp V       &kp B         &kp N      &kp M        &kp COMMA   &kp DOT  &kp SLASH
-                &mo 1       &kp LCTRL   &kp LSHIFT    &kp SPACE  &as DQT SQT  &mo 2
+  &kp Q  &kp W  &kp E       &kp R       &kp T        &kp Y      &kp U        &kp I       &kp O    &kp P
+  &kp A  &kp S  &hm LALT D  &hm LGUI F  &kp G        &kp H      &hm LGUI J   &hm LALT K  &kp L    &kp SEMI
+  &kp Z  &kp X  &kp C       &kp V       &kp B        &kp N      &kp M        &kp COMMA   &kp DOT  &kp SLASH
+                &mo 1       &kp LCTRL   &kp LSHFT    &kp SPACE  &as DQT SQT  &mo 2
             >;
         };
 
-        numsym_layer {
+        sym_layer {
             bindings = <
   &as EXCL N1  &as AT N2  &as HASH N3    &as DLLR N4  &as PRCNT N5    &as CARET N6  &as AMPS N7     &as STAR N8    &as LPAR N9  &as RPAR N0
   &kp GRAVE    &kp LPAR   &hm LALT RPAR  &kp LGUI     &kp F18         &kp EQUAL     &hm LGUI MINUS  &hm LALT LBRC  &kp RBRC     &kp PIPE
@@ -106,14 +106,14 @@
 
         nav_layer {
             bindings = <
-  &none   &none   &none   &none   &none     &kp LS(LG(LBKT))  &none          &none         &kp LS(LG(RBKT))  &none
-  &trans  &trans  &trans  &trans  &none     &kp LEFT          &hm LGUI DOWN  &hm LCTRL UP  &hm LALT RIGHT    &caps_word
-  &none   &none   &none   &none   &none     &kp HOME          &kp PG_DN      &kp PG_UP     &kp END           &none
-                  &trans  &trans  &trans    &trans            &trans         &trans
+  &none  &none  &none     &none     &none     &kp LS(LG(LBKT))  &none          &none         &kp LS(LG(RBKT))  &none
+  &none  &none  &kp LALT  &kp LGUI  &none     &kp LEFT          &hm LGUI DOWN  &hm LCTRL UP  &hm LALT RIGHT    &caps_word
+  &none  &none  &none     &none     &none     &kp HOME          &kp PG_DN      &kp PG_UP     &kp END           &none
+                &trans    &trans    &trans    &trans            &trans         &trans
             >;
         };
 
-        extra_layer {
+        ext_layer {
             bindings = <
   &none         &none         &none         &none         &u_bootloader    &none       &kp F14       &kp F15       &none       &none
   &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &u_bt_clr        &kp C_PREV  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_NEXT  &kp C_PP
