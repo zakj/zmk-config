@@ -61,21 +61,25 @@
         esc {
             bindings = <&kp ESC>;
             key-positions = <1 2>;
+            layers = <0 1>;
         };
 
         tab {
             bindings = <&kp TAB>;
             key-positions = <21 22>;
+            layers = <0 1>;
         };
 
-        bksp {
-            bindings = <&kp BACKSPACE>;
+        bspc {
+            bindings = <&kp BSPC>;
             key-positions = <7 8>;
+            layers = <0 1>;
         };
 
         enter {
-            bindings = <&kp ENTER>;
+            bindings = <&kp RET>;
             key-positions = <27 28>;
+            layers = <0 1>;
         };
     };
 
@@ -93,10 +97,10 @@
 
         numsym_layer {
             bindings = <
-  &as EXCL N1      &as AT N2  &as HASH N3  &as DLLR N4  &as PRCNT N5    &as CARET N6     &as AMPS N7     &as STAR N8     &as LPAR N9    &as RPAR N0
-  &hm LSHFT GRAVE  &trans     &trans       &trans       &kp F18         &as UNDER MINUS  &hm LGUI EQUAL  &hm LCTRL LBKT  &hm LALT RBKT  &hm LSHFT BSLH
-  &none            &none      &none        &none        &none           &none            &none           &none           &none          &none
-                              &trans       &none        &trans          &trans           &trans          &trans
+  &as EXCL N1  &as AT N2  &as HASH N3    &as DLLR N4  &as PRCNT N5    &as CARET N6  &as AMPS N7     &as STAR N8    &as LPAR N9  &as RPAR N0
+  &kp GRAVE    &kp LPAR   &hm LALT RPAR  &kp LGUI     &kp F18         &kp EQUAL     &hm LGUI MINUS  &hm LALT LBRC  &kp RBRC     &kp PIPE
+  &kp TILDE    &none      &none          &none        &none           &kp PLUS      &kp UNDER       &kp LBKT       &kp RBKT     &kp BSLH
+                          &trans         &trans       &trans          &trans        &trans          &trans
             >;
         };
 
@@ -105,7 +109,7 @@
   &none   &none   &none   &none   &none     &kp LS(LG(LBKT))  &none          &none         &kp LS(LG(RBKT))  &none
   &trans  &trans  &trans  &trans  &none     &kp LEFT          &hm LGUI DOWN  &hm LCTRL UP  &hm LALT RIGHT    &caps_word
   &none   &none   &none   &none   &none     &kp HOME          &kp PG_DN      &kp PG_UP     &kp END           &none
-                  &trans  &trans  &trans    &trans            &none          &trans
+                  &trans  &trans  &trans    &trans            &trans         &trans
             >;
         };
 
