@@ -8,6 +8,7 @@ draw_config:
 parse_config:
   raw_binding_map:
     "&caps_word": $$tabler:arrow-big-up-line$$
+    "&htl 1 1": sym
     "&u_bt_clr": $$tabler:bluetooth-x$$
     "&bt BT_SEL 0": { t: "$$tabler:bluetooth$$", h: 0 }
     "&bt BT_SEL 1": { t: "$$tabler:bluetooth$$", h: 1 }
