@@ -31,7 +31,7 @@ layers:
   - ','
   - .
   - /
-  - {t: sym, h: sym}
+  - sym
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-shift$$
   - $$tabler:space$$
@@ -68,7 +68,7 @@ layers:
   - '['
   - ']'
   - \
-  - {t: base, type: held}
+  - base
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -142,7 +142,7 @@ layers:
   - ''
   - ''
   - game
-  - {type: held}
+  - ''
   - ''
   - ''
   - ''
