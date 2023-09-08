@@ -48,28 +48,28 @@ layers:
   - {t: '8', h: '*'}
   - {t: '9', h: (}
   - {t: '0', h: )}
-  - {t: '`', h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - '`'
+  - (
+  - {t: ), h: '$$mdi:apple-keyboard-option$$'}
+  - $$mdi:apple-keyboard-command$$
   - $$tabler:hammer$$
-  - {t: '-', h: _}
-  - {t: '=', h: '$$mdi:apple-keyboard-command$$'}
-  - {t: '[', h: '$$mdi:apple-keyboard-control$$'}
-  - {t: ']', h: '$$mdi:apple-keyboard-option$$'}
-  - {t: \, h: '$$mdi:apple-keyboard-shift$$'}
+  - '='
+  - {t: '-', h: '$$mdi:apple-keyboard-command$$'}
+  - {t: '{', h: '$$mdi:apple-keyboard-option$$'}
+  - '}'
+  - '|'
+  - '~'
   - ''
   - ''
   - ''
   - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
+  - +
+  - _
+  - '['
+  - ']'
+  - \
   - {type: held}
-  - ''
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -109,7 +109,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - ''
+  - {t: ▽, type: trans}
   - {type: held}
   extra:
   - ''
@@ -154,9 +154,13 @@ layers:
 combos:
 - p: [1, 2]
   k: $$mdi:keyboard-esc$$
+  l: [base, numsym]
 - p: [21, 22]
   k: $$tabler:arrow-bar-to-right$$
+  l: [base, numsym]
 - p: [7, 8]
-  k: BACKSPACE
+  k: $$tabler:backspace$$
+  l: [base, numsym]
 - p: [27, 28]
-  k: ENTER
+  k: $$tabler:corner-down-left$$
+  l: [base, numsym]
