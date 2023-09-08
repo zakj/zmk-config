@@ -55,15 +55,39 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        esc {
+            bindings = <&kp ESC>;
+            key-positions = <1 2>;
+        };
+
+        tab {
+            bindings = <&kp TAB>;
+            key-positions = <21 22>;
+        };
+
+        bksp {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <7 8>;
+        };
+
+        enter {
+            bindings = <&kp ENTER>;
+            key-positions = <27 28>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         base_layer {
             bindings = <
-  &kp Q        &kp W       &kp E        &kp R              &kp T      &kp Y    &kp U            &kp I        &kp O       &kp P
-  &hm LSHFT A  &hm LALT S  &hm LCTRL D  &hm LGUI F         &kp G      &kp H    &hm LGUI J       &hm LCTRL K  &hm LALT L  &hm LSHFT SEMI
-  &kp Z        &kp X       &kp C        &kp V              &kp B      &kp N    &kp M            &kp COMMA    &kp DOT     &kp SLASH
-                           &kp ESC      &lt L_NUMSYM BSPC  &kp TAB    &kp RET  &lt L_NAV SPACE  &as DQT SQT
+  &kp Q  &kp W  &kp E       &kp R       &kp T         &kp Y      &kp U        &kp I       &kp O    &kp P
+  &kp A  &kp S  &hm LALT D  &hm LGUI F  &kp G         &kp H      &hm LGUI J   &hm LALT K  &kp L    &kp SEMI
+  &kp Z  &kp X  &kp C       &kp V       &kp B         &kp N      &kp M        &kp COMMA   &kp DOT  &kp SLASH
+                &mo 1       &kp LCTRL   &kp LSHIFT    &kp SPACE  &as DQT SQT  &mo 2
             >;
         };
 
