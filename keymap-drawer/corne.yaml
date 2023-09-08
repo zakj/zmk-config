@@ -31,13 +31,13 @@ layers:
   - ','
   - .
   - /
-  - numsym
+  - {t: sym, h: sym}
   - $$mdi:apple-keyboard-control$$
-  - LSHIFT
+  - $$mdi:apple-keyboard-shift$$
   - $$tabler:space$$
   - {t: '''', h: '"'}
   - nav
-  numsym:
+  sym:
   - {t: '1', h: '!'}
   - {t: '2', h: '@'}
   - {t: '3', h: '#'}
@@ -68,7 +68,7 @@ layers:
   - '['
   - ']'
   - \
-  - {type: held}
+  - {t: base, type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -85,10 +85,10 @@ layers:
   - ''
   - ⌘⇧]
   - ''
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - ''
+  - ''
+  - $$mdi:apple-keyboard-option$$
+  - $$mdi:apple-keyboard-command$$
   - ''
   - $$tabler:arrow-left$$
   - {t: '$$tabler:arrow-down$$', h: '$$mdi:apple-keyboard-command$$'}
@@ -111,7 +111,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
-  extra:
+  ext:
   - ''
   - ''
   - ''
@@ -154,13 +154,13 @@ layers:
 combos:
 - p: [1, 2]
   k: $$mdi:keyboard-esc$$
-  l: [base, numsym]
+  l: [base, sym]
 - p: [21, 22]
   k: $$tabler:arrow-bar-to-right$$
-  l: [base, numsym]
+  l: [base, sym]
 - p: [7, 8]
   k: $$tabler:backspace$$
-  l: [base, numsym]
+  l: [base, sym]
 - p: [27, 28]
   k: $$tabler:corner-down-left$$
-  l: [base, numsym]
+  l: [base, sym]
