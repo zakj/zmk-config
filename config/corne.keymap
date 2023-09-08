@@ -17,7 +17,7 @@
     behaviors {
         as: auto_shift {
             compatible = "zmk,behavior-hold-tap";
-            label = "AUTO_SHIFT";
+            label = "Auto-shift";
             #binding-cells = <2>;
             tapping_term_ms = <135>;
             quick_tap_ms = <0>;
@@ -28,7 +28,7 @@
         };
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS";
+            label = "Homerow mods";
             #binding-cells = <2>;
             tapping-term-ms = <150>;
             quick-tap-ms = <0>;
@@ -36,6 +36,16 @@
             bindings =
                 <&kp>,
                 <&kp>;
+        };
+        htl: holdtap_layer {
+            compatible = "zmk,behavior-hold-tap";
+            label = "Hold/tap layer";
+            bindings =
+                <&to>,
+                <&mo>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
         };
         u_bootloader: u_bootloader {
             compatible = "zmk,behavior-tap-dance";
@@ -91,7 +101,7 @@
   &kp Q  &kp W  &kp E       &kp R       &kp T        &kp Y      &kp U        &kp I       &kp O    &kp P
   &kp A  &kp S  &hm LALT D  &hm LGUI F  &kp G        &kp H      &hm LGUI J   &hm LALT K  &kp L    &kp SEMI
   &kp Z  &kp X  &kp C       &kp V       &kp B        &kp N      &kp M        &kp COMMA   &kp DOT  &kp SLASH
-                &mo 1       &kp LCTRL   &kp LSHFT    &kp SPACE  &as DQT SQT  &mo 2
+                &htl 1 1    &kp LCTRL   &kp LSHFT    &kp SPACE  &as DQT SQT  &mo 2
             >;
         };
 
@@ -100,7 +110,7 @@
   &as EXCL N1  &as AT N2  &as HASH N3    &as DLLR N4  &as PRCNT N5    &as CARET N6  &as AMPS N7     &as STAR N8    &as LPAR N9  &as RPAR N0
   &kp GRAVE    &kp LPAR   &hm LALT RPAR  &kp LGUI     &kp F18         &kp EQUAL     &hm LGUI MINUS  &hm LALT LBRC  &kp RBRC     &kp PIPE
   &kp TILDE    &none      &none          &none        &none           &kp PLUS      &kp UNDER       &kp LBKT       &kp RBKT     &kp BSLH
-                          &trans         &trans       &trans          &trans        &trans          &trans
+                          &to 0          &trans       &trans          &trans        &trans          &trans
             >;
         };
 
