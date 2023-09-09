@@ -40,8 +40,9 @@ parse_config:
     LEFT: $$tabler:arrow-left$$
     "LS(LG(LBKT))": "⌘⇧["
     "LS(LG(RBKT))": "⌘⇧]"
-    "LS(LG(A))": { t: "$$tabler:device-computer$$", h: "$$tabler:brand-zoom$$" }
-    "LS(LG(V))": { t: "$$tabler:microphone$$", h: "$$tabler:brand-zoom$$" }
+    "LS(LG(A))": { t: "$$tabler:microphone$$", h: "$$tabler:brand-zoom$$" }
+    "LS(LG(V))":
+      { t: "$$tabler:device-computer-camera$$", h: "$$tabler:brand-zoom$$" }
 
     # defaults
     AMPS: "&"
