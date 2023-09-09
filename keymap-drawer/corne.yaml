@@ -138,7 +138,7 @@ layers:
   - ''
   - ''
   - ''
-  - MUTE
+  - $$tabler:volume-3$$
   - ''
   - ''
   - game
