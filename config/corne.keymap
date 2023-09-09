@@ -127,7 +127,7 @@
             bindings = <
   &none         &none         &none         &none         &u_bootloader    &none       &kp F14       &kp F15       &none       &none
   &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &u_bt_clr        &kp C_PREV  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_NEXT  &kp C_PP
-  &none         &none         &none         &none         &none            &none       &none         &none         &none       &to L_GAME
+  &none         &none         &none         &none         &none            &none       &kp K_MUTE    &none         &none       &to L_GAME
                               &none         &none         &none            &none       &none         &none
             >;
         };
