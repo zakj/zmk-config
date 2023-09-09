@@ -95,8 +95,8 @@ layers:
   - $$tabler:arrow-up$$
   - $$tabler:arrow-right$$
   - ''
-  - LS(LG(A))
-  - LS(LG(V))
+  - {t: '$$tabler:device-computer$$', h: '$$tabler:brand-zoom$$'}
+  - {t: '$$tabler:microphone$$', h: '$$tabler:brand-zoom$$'}
   - ''
   - ''
   - ''
