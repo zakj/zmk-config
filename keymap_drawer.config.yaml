@@ -29,6 +29,7 @@ parse_config:
     F14: $$tabler:brightness-down$$
     F15: $$tabler:brightness-up$$
     F18: $$tabler:hammer$$
+    K_MUTE: $$tabler:volume-3$$
     C_VOL_DN: $$tabler:volume-2$$
     C_VOL_UP: $$tabler:volume$$
     C_NEXT: $$tabler:player-skip-forward$$
