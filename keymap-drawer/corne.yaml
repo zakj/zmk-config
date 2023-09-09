@@ -31,7 +31,7 @@ layers:
   - ','
   - .
   - /
-  - sym
+  - {t: sym, h: sym}
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-shift$$
   - $$tabler:space$$
@@ -68,7 +68,7 @@ layers:
   - '['
   - ']'
   - \
-  - base
+  - {t: base, type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -91,12 +91,12 @@ layers:
   - $$mdi:apple-keyboard-command$$
   - ''
   - $$tabler:arrow-left$$
-  - {t: '$$tabler:arrow-down$$', h: '$$mdi:apple-keyboard-command$$'}
-  - {t: '$$tabler:arrow-up$$', h: '$$mdi:apple-keyboard-control$$'}
-  - {t: '$$tabler:arrow-right$$', h: '$$mdi:apple-keyboard-option$$'}
-  - $$tabler:arrow-big-up-line$$
+  - $$tabler:arrow-down$$
+  - $$tabler:arrow-up$$
+  - $$tabler:arrow-right$$
   - ''
-  - ''
+  - LS(LG(A))
+  - LS(LG(V))
   - ''
   - ''
   - ''
@@ -138,19 +138,18 @@ layers:
   - ''
   - ''
   - ''
-  - ''
+  - MUTE
   - ''
   - ''
   - game
-  - ''
+  - {type: held}
   - ''
   - ''
   - ''
   - ''
   - {type: held}
   game: ['$$tabler:arrow-bar-to-right$$', Q, W, E, R, Y, U, I, O, P, '$$mdi:apple-keyboard-shift$$', A, S, D, F, H, J, K, L, '''', '$$mdi:apple-keyboard-control$$',
-    Z, X, C, V, N, M, ',', ., /, '$$mdi:keyboard-esc$$', '$$tabler:backspace$$', '$$tabler:arrow-bar-to-right$$', '$$tabler:corner-down-left$$', '$$tabler:space$$',
-    base]
+    Z, X, C, V, N, M, ',', ., /, '$$mdi:keyboard-esc$$', '$$tabler:space$$', '$$tabler:space$$', '$$tabler:corner-down-left$$', '$$tabler:space$$', base]
 combos:
 - p: [1, 2]
   k: $$mdi:keyboard-esc$$
