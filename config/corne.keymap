@@ -31,13 +31,11 @@
             label = "Homerow mods";
             #binding-cells = <2>;
             tapping-term-ms = <150>;
-            quick-tap-ms = <125>;
+            quick-tap-ms = <0>;
             flavor = "tap-preferred";
             bindings =
                 <&kp>,
                 <&kp>;
-
-            global-quick-tap;
         };
         htl: holdtap_layer {
             compatible = "zmk,behavior-hold-tap";
@@ -100,10 +98,10 @@
 
         base_layer {
             bindings = <
-  &kp Q  &kp W  &kp E       &kp R       &kp T        &kp Y      &kp U       &kp I       &kp O    &kp P
-  &kp A  &kp S  &hm LALT D  &hm LGUI F  &kp G        &kp H      &hm LGUI J  &hm LALT K  &kp L    &kp SEMI
-  &kp Z  &kp X  &kp C       &kp V       &kp B        &kp N      &kp M       &kp COMMA   &kp DOT  &kp SLASH
-                &htl 1 1    &kp LCTRL   &kp LSHFT    &kp SPACE  &kp SQT     &mo 2
+  &kp Q  &kp W  &kp E       &kp R       &kp T        &kp Y      &kp U        &kp I       &kp O    &kp P
+  &kp A  &kp S  &hm LALT D  &hm LGUI F  &kp G        &kp H      &hm LGUI J   &hm LALT K  &kp L    &kp SEMI
+  &kp Z  &kp X  &kp C       &kp V       &kp B        &kp N      &kp M        &kp COMMA   &kp DOT  &kp SLASH
+                &htl 1 1    &kp LCTRL   &kp LSHFT    &kp SPACE  &as DQT SQT  &mo 2
             >;
         };
 
