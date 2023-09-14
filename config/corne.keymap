@@ -31,7 +31,7 @@
             label = "Homerow mods";
             #binding-cells = <2>;
             tapping-term-ms = <150>;
-            quick-tap-ms = <125>;
+            quick-tap-ms = <135>;
             global-quick-tap;
             flavor = "tap-preferred";
             bindings =
@@ -72,24 +72,28 @@
             bindings = <&kp ESC>;
             key-positions = <1 2>;
             layers = <0 1>;
+            timeout-ms = 40;
         };
 
         tab {
             bindings = <&kp TAB>;
             key-positions = <21 22>;
             layers = <0 1>;
+            timeout-ms = 40;
         };
 
         bspc {
             bindings = <&kp BSPC>;
             key-positions = <7 8>;
             layers = <0 1>;
+            timeout-ms = 40;
         };
 
         enter {
             bindings = <&kp RET>;
             key-positions = <27 28>;
             layers = <0 1>;
+            timeout-ms = 40;
         };
     };
 
