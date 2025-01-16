@@ -25,7 +25,7 @@ parse_config:
     RALT: $$mdi:apple-keyboard-option$$
     LSHFT: $$mdi:apple-keyboard-shift$$
     RSHFT: $$mdi:apple-keyboard-shift$$
-    LC(LA(LS(LGUI))): $$mdi-rhombus$$
+    LC(LA(LS(LGUI))): $$mdi:rhombus$$
     BSPC: $$tabler:backspace$$
     ESC: $$mdi:keyboard-esc$$
     RET: $$tabler:corner-down-left$$
