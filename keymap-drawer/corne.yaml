@@ -11,7 +11,7 @@ layers:
   - I
   - O
   - P
-  - {t: A, h: '$$mdi:apple-keyboard-shift$$'}
+  - A
   - {t: S, h: '$$mdi:apple-keyboard-control$$'}
   - {t: D, h: '$$mdi:apple-keyboard-option$$'}
   - {t: F, h: '$$mdi:apple-keyboard-command$$'}
@@ -20,7 +20,7 @@ layers:
   - {t: J, h: '$$mdi:apple-keyboard-command$$'}
   - {t: K, h: '$$mdi:apple-keyboard-option$$'}
   - {t: L, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: ;, h: '$$mdi:apple-keyboard-shift$$'}
+  - ;
   - {t: Z, h: 'Meh+$$mdi:apple-keyboard-command$$'}
   - X
   - C
@@ -33,7 +33,7 @@ layers:
   - /
   - {t: sym, h: sym}
   - $$tabler:arrow-bar-to-right$$
-  - $$tabler:corner-down-left$$
+  - $$mdi:apple-keyboard-shift$$
   - $$tabler:space$$
   - ''''
   - nav
@@ -48,7 +48,7 @@ layers:
   - {t: '8', h: '*'}
   - {t: '9', h: (}
   - {t: '0', h: )}
-  - {t: '`', h: '$$mdi:apple-keyboard-shift$$'}
+  - '`'
   - {t: '[', h: '$$mdi:apple-keyboard-control$$'}
   - {t: '{', h: '$$mdi:apple-keyboard-option$$'}
   - {t: (, h: '$$mdi:apple-keyboard-command$$'}
@@ -57,7 +57,7 @@ layers:
   - {t: ), h: '$$mdi:apple-keyboard-command$$'}
   - {t: '}', h: '$$mdi:apple-keyboard-option$$'}
   - {t: ']', h: '$$mdi:apple-keyboard-control$$'}
-  - {t: \, h: '$$mdi:apple-keyboard-shift$$'}
+  - \
   - ''
   - ''
   - ''
@@ -80,9 +80,9 @@ layers:
   - ''
   - ''
   - ''
+  - PG UP
   - ⌘⇧[
-  - ''
-  - ''
+  - UP ARROW
   - ⌘⇧]
   - ''
   - $$mdi:apple-keyboard-shift$$
@@ -90,19 +90,19 @@ layers:
   - $$mdi:apple-keyboard-option$$
   - $$mdi:apple-keyboard-command$$
   - ''
+  - PG DN
   - $$tabler:arrow-left$$
-  - $$tabler:arrow-down$$
   - $$tabler:arrow-up$$
   - $$tabler:arrow-right$$
-  - ''
+  - $$tabler:corner-down-left$$
   - {t: '$$tabler:microphone$$', h: '$$tabler:brand-zoom$$'}
   - {t: '$$tabler:device-computer-camera$$', h: '$$tabler:brand-zoom$$'}
   - ''
   - ''
   - ''
+  - ''
   - HOME
-  - PG DN
-  - PG UP
+  - ''
   - END
   - ''
   - {t: ▽, type: trans}
