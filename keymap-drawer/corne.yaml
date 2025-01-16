@@ -11,7 +11,7 @@ layers:
   - I
   - O
   - P
-  - {t: A, h: LEFT SHIFT}
+  - {t: A, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: S, h: '$$mdi:apple-keyboard-control$$'}
   - {t: D, h: '$$mdi:apple-keyboard-option$$'}
   - {t: F, h: '$$mdi:apple-keyboard-command$$'}
@@ -33,7 +33,7 @@ layers:
   - /
   - {t: sym, h: sym}
   - $$tabler:arrow-bar-to-right$$
-  - ENTER
+  - $$tabler:corner-down-left$$
   - $$tabler:space$$
   - ''''
   - nav
@@ -142,12 +142,12 @@ layers:
   - ''
   - ''
   - {t: game, h: toggle}
+  - {type: held}
   - ''
   - ''
   - ''
   - ''
-  - ''
-  - ''
+  - {type: held}
   game:
   - $$tabler:arrow-bar-to-right$$
   - Q
