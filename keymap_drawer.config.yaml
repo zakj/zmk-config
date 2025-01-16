@@ -18,9 +18,14 @@ parse_config:
 
   zmk_keycode_map:
     LGUI: $$mdi:apple-keyboard-command$$
+    RGUI: $$mdi:apple-keyboard-command$$
     LCTRL: $$mdi:apple-keyboard-control$$
+    RCTRL: $$mdi:apple-keyboard-control$$
     LALT: $$mdi:apple-keyboard-option$$
+    RALT: $$mdi:apple-keyboard-option$$
     LSHFT: $$mdi:apple-keyboard-shift$$
+    RSHFT: $$mdi:apple-keyboard-shift$$
+    LC(LA(LS(LGUI))): $$mdi-rhombus$$
     BSPC: $$tabler:backspace$$
     ESC: $$mdi:keyboard-esc$$
     RET: $$tabler:corner-down-left$$
