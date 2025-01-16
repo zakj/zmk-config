@@ -21,7 +21,7 @@ layers:
   - {t: K, h: '$$mdi:apple-keyboard-option$$'}
   - {t: L, h: RCTRL}
   - {t: ;, h: RSHIFT}
-  - Z
+  - {t: Z, h: 'Meh+$$mdi:apple-keyboard-command$$'}
   - X
   - C
   - V
@@ -33,7 +33,7 @@ layers:
   - /
   - {t: sym, h: sym}
   - $$tabler:arrow-bar-to-right$$
-  - $$tabler:backspace$$
+  - ENTER
   - $$tabler:space$$
   - ''''
   - nav
@@ -48,16 +48,16 @@ layers:
   - {t: '8', h: '*'}
   - {t: '9', h: (}
   - {t: '0', h: )}
-  - '`'
-  - '['
-  - '{'
-  - (
+  - {t: '`', h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: '[', h: '$$mdi:apple-keyboard-control$$'}
+  - {t: '{', h: '$$mdi:apple-keyboard-option$$'}
+  - {t: (, h: '$$mdi:apple-keyboard-command$$'}
   - '-'
   - '='
-  - )
-  - '}'
-  - ']'
-  - \
+  - {t: ), h: RGUI}
+  - {t: '}', h: RALT}
+  - {t: ']', h: RCTRL}
+  - {t: \, h: RSHIFT}
   - ''
   - ''
   - ''
@@ -229,5 +229,3 @@ combos:
 - p: [7, 8]
   k: $$tabler:backspace$$
   l: [base, old_sym]
-- p: [16, 17, 18]
-  k: ENTER
