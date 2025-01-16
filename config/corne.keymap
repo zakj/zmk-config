@@ -1,5 +1,5 @@
-#include <behaviors.dtsi>
 #include <dt-bindings/zmk/matrix_transform.h>
+#include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
@@ -10,22 +10,19 @@
 #define L_GAME 4
 
 / {
-    chosen {
-        zmk,matrix_transform = &five_column_transform;
-    };
+    chosen { zmk,matrix_transform = &five_column_transform; };
 
     behaviors {
         as: auto_shift {
             compatible = "zmk,behavior-hold-tap";
             label = "Auto-shift";
             #binding-cells = <2>;
-            tapping_term_ms = <135>;
-            quick_tap_ms = <0>;
             flavor = "tap-preferred";
-            bindings =
-                <&kp>,
-                <&kp>;
+            bindings = <&kp>, <&kp>;
+
+            tapping-term-ms = <135>;
         };
+
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             label = "Homerow mods";
@@ -34,34 +31,31 @@
             quick-tap-ms = <135>;
             global-quick-tap;
             flavor = "tap-preferred";
-            bindings =
-                <&kp>,
-                <&kp>;
+            bindings = <&kp>, <&kp>;
+
+            require-prior-idle-ms = <50>;
         };
+
         htl: holdtap_layer {
             compatible = "zmk,behavior-hold-tap";
             label = "Hold/tap layer";
             #binding-cells = <2>;
             tapping-term-ms = <150>;
-            bindings =
-                <&mo>,
-                <&to>;
+            bindings = <&mo>, <&to>;
         };
+
         u_bootloader: u_bootloader {
             compatible = "zmk,behavior-tap-dance";
             label = "U_BOOTLOADER";
             #binding-cells = <0>;
-            bindings =
-                <&none>,
-                <&bootloader>;
+            bindings = <&none>, <&bootloader>;
         };
+
         u_bt_clr: u_bt_clr {
             compatible = "zmk,behavior-tap-dance";
             label = "U_BT_CLR";
             #binding-cells = <0>;
-            bindings =
-                <&none>,
-                <&bt BT_CLR>;
+            bindings = <&none>, <&bt BT_CLR>;
         };
     };
 
@@ -71,29 +65,20 @@
         esc {
             bindings = <&kp ESC>;
             key-positions = <1 2>;
-            layers = <0 1>;
-            timeout-ms = <40>;
-        };
-
-        tab {
-            bindings = <&kp TAB>;
-            key-positions = <21 22>;
-            layers = <0 1>;
+            layers = <0 5>;
             timeout-ms = <40>;
         };
 
         bspc {
             bindings = <&kp BSPC>;
             key-positions = <7 8>;
-            layers = <0 1>;
+            layers = <0 5>;
             timeout-ms = <40>;
         };
 
         enter {
-            bindings = <&kp RET>;
-            key-positions = <27 28>;
-            layers = <0 1>;
-            timeout-ms = <40>;
+            bindings = <&kp ENTER>;
+            key-positions = <16 17 18>;
         };
     };
 
@@ -102,26 +87,26 @@
 
         base_layer {
             bindings = <
-  &kp Q  &kp W  &kp E       &kp R       &kp T        &kp Y      &kp U       &kp I       &kp O    &kp P
-  &kp A  &kp S  &hm LALT D  &hm LGUI F  &kp G        &kp H      &hm LGUI J  &hm LALT K  &kp L    &kp SEMI
-  &kp Z  &kp X  &kp C       &kp V       &kp B        &kp N      &kp M       &kp COMMA   &kp DOT  &kp SLASH
-                &htl 1 1    &kp LCTRL   &kp LSHFT    &kp SPACE  &kp SQT     &mo 2
+  &kp Q             &kp W        &kp E       &kp R       &kp T       &kp Y      &kp U       &kp I       &kp O        &kp P
+  &hm LEFT_SHIFT A  &hm LCTRL S  &hm LALT D  &hm LGUI F  &kp G       &kp H      &hm LGUI J  &hm LALT K  &hm RCTRL L  &hm RSHIFT SEMI
+  &kp Z             &kp X        &kp C       &kp V       &kp B       &kp N      &kp M       &kp COMMA   &kp DOT      &kp SLASH
+                                 &htl 1 1    &kp TAB     &kp BSPC    &kp SPACE  &kp SQT     &mo 2
             >;
         };
 
         sym_layer {
             bindings = <
-  &as EXCL N1  &as AT N2  &as HASH N3    &as DLLR N4  &as PRCNT N5    &as CARET N6  &as AMPS N7     &as STAR N8    &as LPAR N9  &as RPAR N0
-  &kp GRAVE    &kp LPAR   &hm LALT RPAR  &kp LGUI     &kp F18         &kp EQUAL     &hm LGUI MINUS  &hm LALT LBRC  &kp RBRC     &kp PIPE
-  &kp TILDE    &kp LBKT   &kp RBKT       &none        &none           &kp PLUS      &kp UNDER       &kp LT         &kp GT       &kp BSLH
-                          &to 0          &trans       &trans          &trans        &trans          &trans
+  &as EXCL N1  &as AT N2  &as HASH N3  &as DLLR N4  &as PRCNT N5    &as CARET N6  &as AMPS N7  &as STAR N8  &as LPAR N9  &as RPAR N0
+  &kp GRAVE    &kp LBKT   &kp LBRC     &kp LPAR     &kp MINUS       &kp EQUAL     &kp RPAR     &kp RBRC     &kp RBKT     &kp BSLH
+  &none        &none      &none        &none        &none           &none         &none        &none        &none        &none
+                          &to 0        &trans       &trans          &trans        &trans       &trans
             >;
         };
 
         nav_layer {
             bindings = <
   &none          &none          &none     &none     &none     &kp LS(LG(LBKT))  &none      &none      &kp LS(LG(RBKT))  &none
-  &none          &none          &kp LALT  &kp LGUI  &none     &kp LEFT          &kp DOWN   &kp UP     &kp RIGHT         &none
+  &kp LSHFT      &kp LCTRL      &kp LALT  &kp LGUI  &none     &kp LEFT          &kp DOWN   &kp UP     &kp RIGHT         &none
   &kp LS(LG(A))  &kp LS(LG(V))  &none     &none     &none     &kp HOME          &kp PG_DN  &kp PG_UP  &kp END           &none
                                 &trans    &trans    &trans    &trans            &trans     &trans
             >;
@@ -131,17 +116,26 @@
             bindings = <
   &none         &none         &none         &none         &u_bootloader    &none       &kp F14       &kp F15       &none       &none
   &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &u_bt_clr        &kp C_PREV  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_NEXT  &kp C_PP
-  &none         &none         &none         &none         &none            &none       &kp K_MUTE    &none         &none       &to L_GAME
+  &none         &none         &none         &none         &none            &none       &kp K_MUTE    &none         &none       &to 4
                               &none         &none         &none            &none       &none         &none
             >;
         };
 
         game_layer {
             bindings = <
-  &kp TAB    &kp Q  &kp W    &kp E      &kp R        &kp Y    &kp U      &kp I       &kp O    &kp P
-  &kp LSHFT  &kp A  &kp S    &kp D      &kp F        &kp H    &kp J      &kp K       &kp L    &kp SQT
-  &kp LCTRL  &kp Z  &kp X    &kp C      &kp V        &kp N    &kp M      &kp COMMA   &kp DOT  &kp SLASH
-                    &kp ESC  &kp SPACE  &kp SPACE    &kp RET  &kp SPACE  &to L_BASE
+  &kp TAB    &kp Q  &kp W    &kp E      &kp R        &kp Y    &kp U      &kp I      &kp O    &kp P
+  &kp LSHFT  &kp A  &kp S    &kp D      &kp F        &kp H    &kp J      &kp K      &kp L    &kp SQT
+  &kp LCTRL  &kp Z  &kp X    &kp C      &kp V        &kp N    &kp M      &kp COMMA  &kp DOT  &kp SLASH
+                    &kp ESC  &kp SPACE  &kp SPACE    &kp RET  &kp SPACE  &to 0
+            >;
+        };
+
+        old_sym_layer {
+            bindings = <
+  &as EXCL N1  &as AT N2  &as HASH N3    &as DLLR N4  &as PRCNT N5    &as CARET N6  &as AMPS N7     &as STAR N8    &as LPAR N9  &as RPAR N0
+  &kp GRAVE    &kp LPAR   &hm LALT RPAR  &kp LGUI     &kp F18         &kp EQUAL     &hm LGUI MINUS  &hm LALT LBRC  &kp RBRC     &kp PIPE
+  &kp TILDE    &kp LBKT   &kp RBKT       &none        &none           &kp PLUS      &kp UNDER       &kp LT         &kp GT       &kp BSLH
+                          &to 0          &trans       &trans          &trans        &trans          &trans
             >;
         };
     };
@@ -150,7 +144,7 @@
         compatible = "zmk,conditional-layers";
 
         extra {
-            if-layers = <1 2>;
+            if-layers = <5 2>;
             then-layer = <3>;
         };
     };
