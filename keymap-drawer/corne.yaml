@@ -1,4 +1,4 @@
-layout: {qmk_keyboard: corne_rotated, qmk_layout: LAYOUT_split_3x5_3}
+layout: {qmk_keyboard: corne_rotated, layout_name: LAYOUT_split_3x5_3}
 layers:
   base:
   - Q
@@ -11,16 +11,16 @@ layers:
   - I
   - O
   - P
-  - A
-  - S
+  - {t: A, h: LEFT SHIFT}
+  - {t: S, h: '$$mdi:apple-keyboard-control$$'}
   - {t: D, h: '$$mdi:apple-keyboard-option$$'}
   - {t: F, h: '$$mdi:apple-keyboard-command$$'}
   - G
   - H
   - {t: J, h: '$$mdi:apple-keyboard-command$$'}
   - {t: K, h: '$$mdi:apple-keyboard-option$$'}
-  - L
-  - ;
+  - {t: L, h: RCTRL}
+  - {t: ;, h: RSHIFT}
   - Z
   - X
   - C
@@ -32,8 +32,8 @@ layers:
   - .
   - /
   - {t: sym, h: sym}
-  - $$mdi:apple-keyboard-control$$
-  - $$mdi:apple-keyboard-shift$$
+  - $$tabler:arrow-bar-to-right$$
+  - $$tabler:backspace$$
   - $$tabler:space$$
   - ''''
   - nav
@@ -49,26 +49,26 @@ layers:
   - {t: '9', h: (}
   - {t: '0', h: )}
   - '`'
-  - (
-  - {t: ), h: '$$mdi:apple-keyboard-option$$'}
-  - $$mdi:apple-keyboard-command$$
-  - $$tabler:hammer$$
-  - '='
-  - {t: '-', h: '$$mdi:apple-keyboard-command$$'}
-  - {t: '{', h: '$$mdi:apple-keyboard-option$$'}
-  - '}'
-  - '|'
-  - '~'
   - '['
+  - '{'
+  - (
+  - '-'
+  - '='
+  - )
+  - '}'
   - ']'
-  - ''
-  - ''
-  - +
-  - _
-  - <
-  - '>'
   - \
-  - {t: base, type: held}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: base, h: toggle, type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -85,8 +85,8 @@ layers:
   - ''
   - ⌘⇧]
   - ''
-  - ''
-  - ''
+  - $$mdi:apple-keyboard-shift$$
+  - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-option$$
   - $$mdi:apple-keyboard-command$$
   - ''
@@ -141,25 +141,93 @@ layers:
   - $$tabler:volume-3$$
   - ''
   - ''
-  - game
-  - {type: held}
+  - {t: game, h: toggle}
   - ''
   - ''
   - ''
   - ''
-  - {type: held}
-  game: ['$$tabler:arrow-bar-to-right$$', Q, W, E, R, Y, U, I, O, P, '$$mdi:apple-keyboard-shift$$', A, S, D, F, H, J, K, L, '''', '$$mdi:apple-keyboard-control$$',
-    Z, X, C, V, N, M, ',', ., /, '$$mdi:keyboard-esc$$', '$$tabler:space$$', '$$tabler:space$$', '$$tabler:corner-down-left$$', '$$tabler:space$$', base]
+  - ''
+  - ''
+  game:
+  - $$tabler:arrow-bar-to-right$$
+  - Q
+  - W
+  - E
+  - R
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - $$mdi:apple-keyboard-shift$$
+  - A
+  - S
+  - D
+  - F
+  - H
+  - J
+  - K
+  - L
+  - ''''
+  - $$mdi:apple-keyboard-control$$
+  - Z
+  - X
+  - C
+  - V
+  - N
+  - M
+  - ','
+  - .
+  - /
+  - $$mdi:keyboard-esc$$
+  - $$tabler:space$$
+  - $$tabler:space$$
+  - $$tabler:corner-down-left$$
+  - $$tabler:space$$
+  - {t: base, h: toggle}
+  old_sym:
+  - {t: '1', h: '!'}
+  - {t: '2', h: '@'}
+  - {t: '3', h: '#'}
+  - {t: '4', h: $}
+  - {t: '5', h: '%'}
+  - {t: '6', h: ^}
+  - {t: '7', h: '&'}
+  - {t: '8', h: '*'}
+  - {t: '9', h: (}
+  - {t: '0', h: )}
+  - '`'
+  - (
+  - {t: ), h: '$$mdi:apple-keyboard-option$$'}
+  - $$mdi:apple-keyboard-command$$
+  - $$tabler:hammer$$
+  - '='
+  - {t: '-', h: '$$mdi:apple-keyboard-command$$'}
+  - {t: '{', h: '$$mdi:apple-keyboard-option$$'}
+  - '}'
+  - '|'
+  - '~'
+  - '['
+  - ']'
+  - ''
+  - ''
+  - +
+  - _
+  - <
+  - '>'
+  - \
+  - {t: base, h: toggle}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
 combos:
 - p: [1, 2]
   k: $$mdi:keyboard-esc$$
-  l: [base, sym]
-- p: [21, 22]
-  k: $$tabler:arrow-bar-to-right$$
-  l: [base, sym]
+  l: [base, old_sym]
 - p: [7, 8]
   k: $$tabler:backspace$$
-  l: [base, sym]
-- p: [27, 28]
-  k: $$tabler:corner-down-left$$
-  l: [base, sym]
+  l: [base, old_sym]
+- p: [16, 17, 18]
+  k: ENTER
