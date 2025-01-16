@@ -92,7 +92,7 @@ layers:
   - ''
   - PG DN
   - $$tabler:arrow-left$$
-  - $$tabler:arrow-up$$
+  - $$tabler:arrow-down$$
   - $$tabler:arrow-right$$
   - $$tabler:corner-down-left$$
   - {t: '$$tabler:microphone$$', h: '$$tabler:brand-zoom$$'}
