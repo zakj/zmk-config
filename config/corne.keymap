@@ -83,7 +83,7 @@
         base_layer {
             bindings = <
   &kp Q                   &kp W        &kp E       &kp R       &kp T      &kp Y      &kp U       &kp I       &kp O        &kp P
-  &hm LSHFT A             &hm LCTRL S  &hm LALT D  &hm LGUI F  &kp G      &kp H      &hm RGUI J  &hm RALT K  &hm RCTRL L  &hm RSHIFT SEMI
+  &hm LSHFT A             &hm LCTRL S  &hm LALT D  &hm LGUI F  &kp G      &kp H      &hm RGUI J  &hm RALT K  &hm RCTRL L  &hm RSHFT SEMI
   &mt LS(LA(LC(LGUI))) Z  &kp X        &kp C       &kp V       &kp B      &kp N      &kp M       &kp COMMA   &kp DOT      &kp SLASH
                                        &htl 1 1    &kp TAB     &kp RET    &kp SPACE  &kp SQT     &mo 2
             >;
@@ -92,7 +92,7 @@
         sym_layer {
             bindings = <
   &as EXCL N1      &as AT N2       &as HASH N3    &as DLLR N4    &as PRCNT N5    &as CARET N6  &as AMPS N7    &as STAR N8    &as LPAR N9     &as RPAR N0
-  &hm LSHFT GRAVE  &hm LCTRL LBKT  &hm LALT LBRC  &hm LGUI LPAR  &kp MINUS       &kp EQUAL     &hm RGUI RPAR  &hm RALT RBRC  &hm RCTRL RBKT  &hm RSHIFT BSLH
+  &hm LSHFT GRAVE  &hm LCTRL LBKT  &hm LALT LBRC  &hm LGUI LPAR  &kp MINUS       &kp EQUAL     &hm RGUI RPAR  &hm RALT RBRC  &hm RCTRL RBKT  &hm RSHFT BSLH
   &none            &none           &none          &none          &none           &none         &none          &none          &none           &none
                                    &to 0          &trans         &trans          &trans        &trans         &trans
             >;
