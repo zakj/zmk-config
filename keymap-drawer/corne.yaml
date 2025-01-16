@@ -20,7 +20,7 @@ layers:
   - {t: J, h: '$$mdi:apple-keyboard-command$$'}
   - {t: K, h: '$$mdi:apple-keyboard-option$$'}
   - {t: L, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: ;, h: RSHIFT}
+  - {t: ;, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: Z, h: 'Meh+$$mdi:apple-keyboard-command$$'}
   - X
   - C
@@ -57,7 +57,7 @@ layers:
   - {t: ), h: '$$mdi:apple-keyboard-command$$'}
   - {t: '}', h: '$$mdi:apple-keyboard-option$$'}
   - {t: ']', h: '$$mdi:apple-keyboard-control$$'}
-  - {t: \, h: RSHIFT}
+  - {t: \, h: '$$mdi:apple-keyboard-shift$$'}
   - ''
   - ''
   - ''
