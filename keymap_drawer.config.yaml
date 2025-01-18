@@ -15,6 +15,10 @@ parse_config:
     "&bt BT_SEL 2": { t: "$$tabler:bluetooth$$", h: 2 }
     "&bt BT_SEL 3": { t: "$$tabler:bluetooth$$", h: 3 }
     "&u_bootloader": $$tabler:progress-down$$
+    "&frown": ":("
+    "&smile": ":)"
+    "&r_arr": "->"
+    "&r_dbl_arr": "=>"
 
   zmk_keycode_map:
     LGUI: $$mdi:apple-keyboard-command$$
@@ -25,7 +29,7 @@ parse_config:
     RALT: $$mdi:apple-keyboard-option$$
     LSHFT: $$mdi:apple-keyboard-shift$$
     RSHFT: $$mdi:apple-keyboard-shift$$
-    LC(LA(LS(LGUI))): $$mdi:rhombus$$
+    LS(LA(LC(LGUI))): $$mdi:rhombus$$
     BSPC: $$tabler:backspace$$
     ESC: $$mdi:keyboard-esc$$
     RET: $$tabler:corner-down-left$$
@@ -44,8 +48,10 @@ parse_config:
     RIGHT: $$tabler:arrow-right$$
     DOWN: $$tabler:arrow-down$$
     LEFT: $$tabler:arrow-left$$
-    "LS(LG(LBKT))": "⌘⇧["
-    "LS(LG(RBKT))": "⌘⇧]"
+    "LS(LG(LBKT))": "NEXT TAB"
+    "LS(LG(RBKT))": "PREV TAB"
+    "LA(MINUS)": "ndash"
+    "LS(LA(MINUS))": "mdash"
     "LS(LG(A))": { t: "$$tabler:microphone$$", h: "$$tabler:brand-zoom$$" }
     "LS(LG(V))":
       { t: "$$tabler:device-computer-camera$$", h: "$$tabler:brand-zoom$$" }
