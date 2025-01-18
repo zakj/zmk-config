@@ -81,11 +81,11 @@ layers:
   - {t: '$$tabler:bluetooth$$', h: '0'}
   - $$tabler:bluetooth-x$$
   - PG UP
-  - ⌘⇧[
+  - NEXT TAB
   - UP ARROW
-  - ⌘⇧]
+  - PREV TAB
   - ''
-  - {t: 'Meh+$$mdi:apple-keyboard-command$$', h: sticky}
+  - {t: '$$mdi:rhombus$$', h: sticky}
   - $$tabler:volume-3$$
   - {t: '$$tabler:volume-2$$', h: '$$mdi:apple-keyboard-option$$'}
   - {t: '$$tabler:volume$$', h: '$$mdi:apple-keyboard-command$$'}
@@ -94,7 +94,7 @@ layers:
   - $$tabler:arrow-left$$
   - $$tabler:arrow-down$$
   - $$tabler:arrow-right$$
-  - {t: 'Meh+$$mdi:apple-keyboard-command$$', h: sticky}
+  - {t: '$$mdi:rhombus$$', h: sticky}
   - ''
   - $$tabler:player-skip-back$$
   - $$tabler:player-play$$
@@ -124,10 +124,10 @@ layers:
   - F10
   - $$tabler:progress-down$$
   - ''
-  - Alt+-
-  - Sft+Alt+-
-  - '&frown'
-  - '&smile'
+  - ndash
+  - mdash
+  - :(
+  - :)
   - ''
   - ''
   - ''
@@ -139,8 +139,8 @@ layers:
   - ''
   - ''
   - ''
-  - '&r_arr'
-  - '&r_dbl_arr'
+  - ->
+  - =>
   - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
