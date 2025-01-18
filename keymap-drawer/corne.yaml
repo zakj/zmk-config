@@ -50,12 +50,12 @@ layers:
   - '|'
   - {t: '=', h: +}
   - _
-  - '-'
-  - ;
+  - {t: '-', h: '$$mdi:apple-keyboard-option$$'}
+  - {t: ;, h: '$$mdi:apple-keyboard-command$$'}
   - (
   - )
-  - '4'
-  - '5'
+  - {t: '4', h: '$$mdi:apple-keyboard-command$$'}
+  - {t: '5', h: '$$mdi:apple-keyboard-option$$'}
   - '6'
   - ':'
   - {t: '%', h: ^}
@@ -87,8 +87,8 @@ layers:
   - ''
   - {t: 'Meh+$$mdi:apple-keyboard-command$$', h: sticky}
   - $$tabler:volume-3$$
-  - $$tabler:volume-2$$
-  - $$tabler:volume$$
+  - {t: '$$tabler:volume-2$$', h: '$$mdi:apple-keyboard-option$$'}
+  - {t: '$$tabler:volume$$', h: '$$mdi:apple-keyboard-command$$'}
   - $$tabler:brightness-up$$
   - PG DN
   - $$tabler:arrow-left$$
