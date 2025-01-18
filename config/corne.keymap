@@ -9,6 +9,8 @@
 #define L_EXTRA 3
 #define L_GAME 4
 
+&lt { tapping-term-ms = <150>; };
+
 / {
     chosen { zmk,matrix_transform = &five_column_transform; };
 
@@ -56,6 +58,34 @@
             #binding-cells = <0>;
             bindings = <&none>, <&bt BT_CLR>;
         };
+
+        hml: hml {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HML";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <100>;
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 25 26 27 28 29>;
+            flavor = "balanced";
+        };
+
+        hmr: hmr {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HMR";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <100>;
+            flavor = "balanced";
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24>;
+        };
     };
 
     combos {
@@ -102,28 +132,28 @@
 
         base_layer {
             bindings = <
-  &kp Q  &kp W  &kp E          &kp R       &kp T        &kp Y      &kp U       &kp I       &kp O    &kp P
-  &kp A  &kp S  &hm LALT D     &hm LGUI F  &kp G        &kp H      &hm RGUI J  &hm RALT K  &kp L    &kp SQT
-  &kp Z  &kp X  &kp C          &kp V       &kp B        &kp N      &kp M       &kp COMMA   &kp DOT  &kp SLASH
-                &mt LCTRL ESC  &kp LSHFT   &lt 1 TAB    &lt 2 RET  &kp SPACE   &kp BSPC
+  &kp Q  &kp W  &kp E          &kp R        &kp T        &kp Y      &kp U        &kp I        &kp O    &kp P
+  &kp A  &kp S  &hml LALT D    &hml LGUI F  &kp G        &kp H      &hmr RGUI J  &hmr RALT K  &kp L    &kp SQT
+  &kp Z  &kp X  &kp C          &kp V        &kp B        &kp N      &kp M        &kp COMMA    &kp DOT  &kp SLASH
+                &mt LCTRL ESC  &kp LSHFT    &lt 1 TAB    &lt 2 RET  &kp SPACE    &kp BSPC
             >;
         };
 
         sym_layer {
             bindings = <
-  &kp EXCL         &kp AT           &kp HASH   &kp DLLR  &kp LBRC    &kp RBRC  &kp N7  &kp N8  &kp N9  &kp PIPE
-  &as PLUS EQUAL   &kp UNDER        &kp MINUS  &kp SEMI  &kp LPAR    &kp RPAR  &kp N4  &kp N5  &kp N6  &kp COLON
-  &as CARET PRCNT  &as TILDE GRAVE  &kp AMPS   &kp STAR  &kp LBKT    &kp RBKT  &kp N1  &kp N2  &kp N3  &kp BSLH
-                                    &trans     &trans    &trans      &trans    &kp N0  &trans
+  &kp EXCL         &kp AT           &kp HASH         &kp DLLR        &kp LBRC    &kp RBRC  &kp N7        &kp N8        &kp N9  &kp PIPE
+  &as PLUS EQUAL   &kp UNDER        &hml LALT MINUS  &hml LGUI SEMI  &kp LPAR    &kp RPAR  &hmr RGUI N4  &hmr RALT N5  &kp N6  &kp COLON
+  &as CARET PRCNT  &as TILDE GRAVE  &kp AMPS         &kp STAR        &kp LBKT    &kp RBKT  &kp N1        &kp N2        &kp N3  &kp BSLH
+                                    &trans           &trans          &trans      &trans    &kp N0        &trans
             >;
         };
 
         nav_layer {
             bindings = <
-  &bt BT_SEL 3          &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &u_bt_clr    &kp PG_UP  &kp LS(LG(LBKT))  &kp UP_ARROW  &kp LS(LG(RBKT))  &none
-  &sk LS(LA(LC(LGUI)))  &kp K_MUTE    &kp C_VOL_DN  &kp C_VOL_UP  &kp F15      &kp PG_DN  &kp LEFT          &kp DOWN      &kp RIGHT         &sk LS(LA(LC(LGUI)))
-  &none                 &kp C_PREV    &kp C_PP      &kp C_NEXT    &kp F14      &none      &kp HOME          &none         &kp END           &none
-                                      &trans        &trans        &trans       &trans     &trans            &trans
+  &bt BT_SEL 3          &bt BT_SEL 2  &bt BT_SEL 1        &bt BT_SEL 0        &u_bt_clr    &kp PG_UP  &kp LS(LG(LBKT))  &kp UP_ARROW  &kp LS(LG(RBKT))  &none
+  &sk LS(LA(LC(LGUI)))  &kp K_MUTE    &hml LALT C_VOL_DN  &hml LGUI C_VOL_UP  &kp F15      &kp PG_DN  &kp LEFT          &kp DOWN      &kp RIGHT         &sk LS(LA(LC(LGUI)))
+  &none                 &kp C_PREV    &kp C_PP            &kp C_NEXT          &kp F14      &none      &kp HOME          &none         &kp END           &none
+                                      &trans              &trans              &trans       &trans     &trans            &trans
             >;
         };
 
