@@ -94,6 +94,7 @@
         space_hold {
             bindings = <&kp SPACE>;
             key-positions = <31 32>;
+            layers = <0>;
         };
     };
 
