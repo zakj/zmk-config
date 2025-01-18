@@ -12,16 +12,16 @@ layers:
   - O
   - P
   - A
-  - {t: S, h: '$$mdi:apple-keyboard-control$$'}
+  - S
   - {t: D, h: '$$mdi:apple-keyboard-option$$'}
   - {t: F, h: '$$mdi:apple-keyboard-command$$'}
   - G
   - H
   - {t: J, h: '$$mdi:apple-keyboard-command$$'}
   - {t: K, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: L, h: '$$mdi:apple-keyboard-control$$'}
-  - ;
-  - {t: Z, h: 'Meh+$$mdi:apple-keyboard-command$$'}
+  - L
+  - ''''
+  - Z
   - X
   - C
   - V
@@ -31,75 +31,75 @@ layers:
   - ','
   - .
   - /
-  - {t: sym, h: sym}
-  - $$tabler:arrow-bar-to-right$$
+  - {t: '$$mdi:keyboard-esc$$', h: '$$mdi:apple-keyboard-control$$'}
   - $$mdi:apple-keyboard-shift$$
+  - {t: '$$tabler:arrow-bar-to-right$$', h: sym}
+  - {t: '$$tabler:corner-down-left$$', h: nav}
   - $$tabler:space$$
-  - ''''
-  - nav
+  - $$tabler:backspace$$
   sym:
-  - {t: '1', h: '!'}
-  - {t: '2', h: '@'}
-  - {t: '3', h: '#'}
-  - {t: '4', h: $}
-  - {t: '5', h: '%'}
-  - {t: '6', h: ^}
-  - {t: '7', h: '&'}
-  - {t: '8', h: '*'}
-  - {t: '9', h: (}
-  - {t: '0', h: )}
-  - '`'
-  - {t: '[', h: '$$mdi:apple-keyboard-control$$'}
-  - {t: '{', h: '$$mdi:apple-keyboard-option$$'}
-  - {t: (, h: '$$mdi:apple-keyboard-command$$'}
+  - '!'
+  - '@'
+  - '#'
+  - $
+  - '{'
+  - '}'
+  - '7'
+  - '8'
+  - '9'
+  - '|'
+  - {t: '=', h: +}
+  - _
   - '-'
-  - '='
-  - {t: ), h: '$$mdi:apple-keyboard-command$$'}
-  - {t: '}', h: '$$mdi:apple-keyboard-option$$'}
-  - {t: ']', h: '$$mdi:apple-keyboard-control$$'}
+  - ;
+  - (
+  - )
+  - '4'
+  - '5'
+  - '6'
+  - ':'
+  - {t: '%', h: ^}
+  - {t: '`', h: '~'}
+  - '&'
+  - '*'
+  - '['
+  - ']'
+  - '1'
+  - '2'
+  - '3'
   - \
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - {t: base, h: toggle, type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - '0'
   - {t: ▽, type: trans}
   nav:
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
+  - {t: '$$tabler:bluetooth$$', h: '3'}
+  - {t: '$$tabler:bluetooth$$', h: '2'}
+  - {t: '$$tabler:bluetooth$$', h: '1'}
+  - {t: '$$tabler:bluetooth$$', h: '0'}
+  - $$tabler:bluetooth-x$$
   - PG UP
   - ⌘⇧[
   - UP ARROW
   - ⌘⇧]
   - ''
-  - $$mdi:apple-keyboard-shift$$
-  - $$mdi:apple-keyboard-control$$
-  - $$mdi:apple-keyboard-option$$
-  - $$mdi:apple-keyboard-command$$
-  - ''
+  - {t: 'Meh+$$mdi:apple-keyboard-command$$', h: sticky}
+  - $$tabler:volume-3$$
+  - $$tabler:volume-2$$
+  - $$tabler:volume$$
+  - $$tabler:brightness-up$$
   - PG DN
   - $$tabler:arrow-left$$
   - $$tabler:arrow-down$$
   - $$tabler:arrow-right$$
-  - $$tabler:corner-down-left$$
-  - {t: '$$tabler:microphone$$', h: '$$tabler:brand-zoom$$'}
-  - {t: '$$tabler:device-computer-camera$$', h: '$$tabler:brand-zoom$$'}
+  - {t: 'Meh+$$mdi:apple-keyboard-command$$', h: sticky}
   - ''
-  - ''
-  - ''
+  - $$tabler:player-skip-back$$
+  - $$tabler:player-play$$
+  - $$tabler:player-skip-forward$$
+  - $$tabler:brightness-down$$
   - ''
   - HOME
   - ''
@@ -108,124 +108,46 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   ext:
+  - F1
+  - F2
+  - F3
+  - F4
+  - F5
+  - F6
+  - F7
+  - F8
+  - F9
+  - F10
+  - $$tabler:progress-down$$
   - ''
+  - Alt+-
+  - Sft+Alt+-
+  - '&frown'
+  - '&smile'
   - ''
   - ''
   - ''
   - $$tabler:progress-down$$
   - ''
-  - $$tabler:brightness-down$$
-  - $$tabler:brightness-up$$
-  - ''
-  - ''
-  - {t: '$$tabler:bluetooth$$', h: '3'}
-  - {t: '$$tabler:bluetooth$$', h: '2'}
-  - {t: '$$tabler:bluetooth$$', h: '1'}
-  - {t: '$$tabler:bluetooth$$', h: '0'}
-  - $$tabler:bluetooth-x$$
-  - $$tabler:player-skip-back$$
-  - $$tabler:volume-2$$
-  - $$tabler:volume$$
-  - $$tabler:player-skip-forward$$
-  - $$tabler:player-play$$
   - ''
   - ''
   - ''
   - ''
   - ''
   - ''
-  - $$tabler:volume-3$$
+  - '&r_arr'
+  - '&r_dbl_arr'
   - ''
-  - ''
-  - {t: game, h: toggle}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {type: held}
-  - ''
-  - ''
-  - ''
-  - ''
   - {type: held}
-  game:
-  - $$tabler:arrow-bar-to-right$$
-  - Q
-  - W
-  - E
-  - R
-  - Y
-  - U
-  - I
-  - O
-  - P
-  - $$mdi:apple-keyboard-shift$$
-  - A
-  - S
-  - D
-  - F
-  - H
-  - J
-  - K
-  - L
-  - ''''
-  - $$mdi:apple-keyboard-control$$
-  - Z
-  - X
-  - C
-  - V
-  - N
-  - M
-  - ','
-  - .
-  - /
-  - $$mdi:keyboard-esc$$
-  - $$tabler:space$$
-  - $$tabler:space$$
-  - $$tabler:corner-down-left$$
-  - $$tabler:space$$
-  - {t: base, h: toggle}
-  old_sym:
-  - {t: '1', h: '!'}
-  - {t: '2', h: '@'}
-  - {t: '3', h: '#'}
-  - {t: '4', h: $}
-  - {t: '5', h: '%'}
-  - {t: '6', h: ^}
-  - {t: '7', h: '&'}
-  - {t: '8', h: '*'}
-  - {t: '9', h: (}
-  - {t: '0', h: )}
-  - '`'
-  - (
-  - {t: ), h: '$$mdi:apple-keyboard-option$$'}
-  - $$mdi:apple-keyboard-command$$
-  - $$tabler:hammer$$
-  - '='
-  - {t: '-', h: '$$mdi:apple-keyboard-command$$'}
-  - {t: '{', h: '$$mdi:apple-keyboard-option$$'}
-  - '}'
-  - '|'
-  - '~'
-  - '['
-  - ']'
-  - ''
-  - ''
-  - +
-  - _
-  - <
-  - '>'
-  - \
-  - {t: base, h: toggle}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
 combos:
-- p: [1, 2]
-  k: $$mdi:keyboard-esc$$
-  l: [base, sym]
-- p: [7, 8]
-  k: $$tabler:backspace$$
-  l: [base, sym]
+- p: [31, 32]
+  k: $$tabler:space$$
