@@ -29,7 +29,6 @@
             #binding-cells = <2>;
             tapping-term-ms = <150>;
             quick-tap-ms = <135>;
-            global-quick-tap;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
 
@@ -62,18 +61,39 @@
     combos {
         compatible = "zmk,combos";
 
-        esc {
-            bindings = <&kp ESC>;
-            key-positions = <1 2>;
-            layers = <0 1>;
-            timeout-ms = <40>;
+        space_hold {
+            bindings = <&kp SPACE>;
+            key-positions = <31 32>;
+        };
+    };
+
+    macros {
+        smile: smile {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp COLON &kp RPAR>;
+            label = "SMILE";
         };
 
-        bspc {
-            bindings = <&kp BSPC>;
-            key-positions = <7 8>;
-            layers = <0 1>;
-            timeout-ms = <40>;
+        frown: frown {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp COLON &kp LPAR>;
+            label = "FROWN";
+        };
+
+        r_arr: r_arr {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp MINUS &kp GT>;
+            label = "R_ARR";
+        };
+
+        r_dbl_arr: r_dbl_arr {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp EQUAL &kp GT>;
+            label = "R_DBL_ARR";
         };
     };
 
@@ -82,55 +102,37 @@
 
         base_layer {
             bindings = <
-  &kp Q                   &kp W        &kp E       &kp R       &kp T        &kp Y      &kp U       &kp I       &kp O        &kp P
-  &kp A                   &hm LCTRL S  &hm LALT D  &hm LGUI F  &kp G        &kp H      &hm RGUI J  &hm RALT K  &hm RCTRL L  &kp SEMI
-  &mt LS(LA(LC(LGUI))) Z  &kp X        &kp C       &kp V       &kp B        &kp N      &kp M       &kp COMMA   &kp DOT      &kp SLASH
-                                       &htl 1 1    &kp TAB     &kp LSHFT    &kp SPACE  &kp SQT     &mo 2
+  &kp Q  &kp W  &kp E          &kp R       &kp T        &kp Y      &kp U       &kp I       &kp O    &kp P
+  &kp A  &kp S  &hm LALT D     &hm LGUI F  &kp G        &kp H      &hm RGUI J  &hm RALT K  &kp L    &kp SQT
+  &kp Z  &kp X  &kp C          &kp V       &kp B        &kp N      &kp M       &kp COMMA   &kp DOT  &kp SLASH
+                &mt LCTRL ESC  &kp LSHFT   &lt 1 TAB    &lt 2 RET  &kp SPACE   &kp BSPC
             >;
         };
 
         sym_layer {
             bindings = <
-  &as EXCL N1  &as AT N2       &as HASH N3    &as DLLR N4    &as PRCNT N5    &as CARET N6  &as AMPS N7    &as STAR N8    &as LPAR N9     &as RPAR N0
-  &kp GRAVE    &hm LCTRL LBKT  &hm LALT LBRC  &hm LGUI LPAR  &kp MINUS       &kp EQUAL     &hm RGUI RPAR  &hm RALT RBRC  &hm RCTRL RBKT  &kp BSLH
-  &none        &none           &none          &none          &none           &none         &none          &none          &none           &none
-                               &to 0          &trans         &trans          &trans        &trans         &trans
+  &kp EXCL         &kp AT           &kp HASH   &kp DLLR  &kp LBRC    &kp RBRC  &kp N7  &kp N8  &kp N9  &kp PIPE
+  &as PLUS EQUAL   &kp UNDER        &kp MINUS  &kp SEMI  &kp LPAR    &kp RPAR  &kp N4  &kp N5  &kp N6  &kp COLON
+  &as CARET PRCNT  &as TILDE GRAVE  &kp AMPS   &kp STAR  &kp LBKT    &kp RBKT  &kp N1  &kp N2  &kp N3  &kp BSLH
+                                    &trans     &trans    &trans      &trans    &kp N0  &trans
             >;
         };
 
         nav_layer {
             bindings = <
-  &none          &none          &none     &none     &none     &kp PG_UP  &kp LS(LG(LBKT))  &kp UP_ARROW  &kp LS(LG(RBKT))  &none
-  &kp LSHFT      &kp LCTRL      &kp LALT  &kp LGUI  &none     &kp PG_DN  &kp LEFT          &kp DOWN      &kp RIGHT         &kp RET
-  &kp LS(LG(A))  &kp LS(LG(V))  &none     &none     &none     &none      &kp HOME          &none         &kp END           &none
-                                &trans    &trans    &trans    &trans     &trans            &trans
+  &bt BT_SEL 3          &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &u_bt_clr    &kp PG_UP  &kp LS(LG(LBKT))  &kp UP_ARROW  &kp LS(LG(RBKT))  &none
+  &sk LS(LA(LC(LGUI)))  &kp K_MUTE    &kp C_VOL_DN  &kp C_VOL_UP  &kp F15      &kp PG_DN  &kp LEFT          &kp DOWN      &kp RIGHT         &sk LS(LA(LC(LGUI)))
+  &none                 &kp C_PREV    &kp C_PP      &kp C_NEXT    &kp F14      &none      &kp HOME          &none         &kp END           &none
+                                      &trans        &trans        &trans       &trans     &trans            &trans
             >;
         };
 
         ext_layer {
             bindings = <
-  &none         &none         &none         &none         &u_bootloader    &none       &kp F14       &kp F15       &none       &none
-  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &u_bt_clr        &kp C_PREV  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_NEXT  &kp C_PP
-  &none         &none         &none         &none         &none            &none       &kp K_MUTE    &none         &none       &to 4
-                              &none         &none         &none            &none       &none         &none
-            >;
-        };
-
-        game_layer {
-            bindings = <
-  &kp TAB    &kp Q  &kp W    &kp E      &kp R        &kp Y    &kp U      &kp I      &kp O    &kp P
-  &kp LSHFT  &kp A  &kp S    &kp D      &kp F        &kp H    &kp J      &kp K      &kp L    &kp SQT
-  &kp LCTRL  &kp Z  &kp X    &kp C      &kp V        &kp N    &kp M      &kp COMMA  &kp DOT  &kp SLASH
-                    &kp ESC  &kp SPACE  &kp SPACE    &kp RET  &kp SPACE  &to 0
-            >;
-        };
-
-        old_sym_layer {
-            bindings = <
-  &as EXCL N1  &as AT N2  &as HASH N3    &as DLLR N4  &as PRCNT N5    &as CARET N6  &as AMPS N7     &as STAR N8    &as LPAR N9  &as RPAR N0
-  &kp GRAVE    &kp LPAR   &hm LALT RPAR  &kp LGUI     &kp F18         &kp EQUAL     &hm LGUI MINUS  &hm LALT LBRC  &kp RBRC     &kp PIPE
-  &kp TILDE    &kp LBKT   &kp RBKT       &none        &none           &kp PLUS      &kp UNDER       &kp LT         &kp GT       &kp BSLH
-                          &to 0          &trans       &trans          &trans        &trans          &trans
+  &kp F1         &kp F2  &kp F3         &kp F4             &kp F5    &kp F6  &kp F7  &kp F8  &kp F9      &kp F10
+  &u_bootloader  &none   &kp LA(MINUS)  &kp LS(LA(MINUS))  &frown    &smile  &none   &none   &none       &u_bootloader
+  &none          &none   &none          &none              &none     &none   &none   &r_arr  &r_dbl_arr  &none
+                         &trans         &trans             &trans    &trans  &trans  &trans
             >;
         };
     };
