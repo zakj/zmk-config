@@ -101,6 +101,7 @@
             bindings = <&kp BSPC>;
             key-positions = <7 8>;
             require-prior-idle-ms = <50>;
+            layers = <0 1>;
         };
     };
 
