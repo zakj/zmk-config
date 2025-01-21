@@ -152,3 +152,5 @@ combos:
 - p: [31, 32]
   k: $$tabler:space$$
   l: [base]
+- p: [7, 8]
+  k: $$tabler:backspace$$
