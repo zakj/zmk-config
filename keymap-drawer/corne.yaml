@@ -154,3 +154,4 @@ combos:
   l: [base]
 - p: [7, 8]
   k: $$tabler:backspace$$
+  l: [base, sym]
