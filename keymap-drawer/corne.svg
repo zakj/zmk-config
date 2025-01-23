@@ -647,24 +647,24 @@ g.trans {
 </g>
 <g transform="translate(230, 213) rotate(15.0)" class="key keypos-31">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<use href="#mdi:apple-keyboard-command" xlink:href="#mdi:apple-keyboard-command" x="-10" y="-10" height="20" width="20.0" class="key tap glyph mdi:apple-keyboard-command"/>
-</g>
-<g transform="translate(295, 224) rotate(30.0)" class="key keypos-32">
-<rect rx="6" ry="6" x="-26" y="-40" width="52" height="80" class="key"/>
 <use href="#tabler:arrow-bar-to-right" xlink:href="#tabler:arrow-bar-to-right" x="-10" y="-10" height="20" width="20.0" class="key tap glyph tabler:arrow-bar-to-right"/>
 <a href="#sym">
-<text x="0" y="38" class="key hold layer-activator">sym</text>
+<text x="0" y="24" class="key hold layer-activator">sym</text>
 </a></g>
+<g transform="translate(295, 224) rotate(30.0)" class="key keypos-32">
+<rect rx="6" ry="6" x="-26" y="-40" width="52" height="80" class="key"/>
+<use href="#mdi:apple-keyboard-command" xlink:href="#mdi:apple-keyboard-command" x="-10" y="-10" height="20" width="20.0" class="key tap glyph mdi:apple-keyboard-command"/>
+</g>
 <g transform="translate(433, 224) rotate(-30.0)" class="key keypos-33">
 <rect rx="6" ry="6" x="-26" y="-40" width="52" height="80" class="key"/>
 <use href="#tabler:corner-down-left" xlink:href="#tabler:corner-down-left" x="-10" y="-10" height="20" width="20.0" class="key tap glyph tabler:corner-down-left"/>
-<a href="#nav">
-<text x="0" y="38" class="key hold layer-activator">nav</text>
-</a></g>
+</g>
 <g transform="translate(498, 213) rotate(-15.0)" class="key keypos-34">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <use href="#tabler:space" xlink:href="#tabler:space" x="-10" y="-10" height="20" width="20.0" class="key tap glyph tabler:space"/>
-</g>
+<a href="#nav">
+<text x="0" y="24" class="key hold layer-activator">nav</text>
+</a></g>
 <g transform="translate(560, 205)" class="key keypos-35">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <use href="#tabler:backspace" xlink:href="#tabler:backspace" x="-10" y="-10" height="20" width="20.0" class="key tap glyph tabler:backspace"/>
@@ -816,12 +816,12 @@ g.trans {
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
 <text x="0" y="0" class="key trans tap">▽</text>
 </g>
-<g transform="translate(230, 213) rotate(15.0)" class="key trans keypos-31">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<g transform="translate(230, 213) rotate(15.0)" class="key held keypos-31">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key held"/>
 </g>
-<g transform="translate(295, 224) rotate(30.0)" class="key held keypos-32">
-<rect rx="6" ry="6" x="-26" y="-40" width="52" height="80" class="key held"/>
+<g transform="translate(295, 224) rotate(30.0)" class="key trans keypos-32">
+<rect rx="6" ry="6" x="-26" y="-40" width="52" height="80" class="key trans"/>
+<text x="0" y="0" class="key trans tap">▽</text>
 </g>
 <g transform="translate(433, 224) rotate(-30.0)" class="key trans keypos-33">
 <rect rx="6" ry="6" x="-26" y="-40" width="52" height="80" class="key trans"/>
@@ -990,12 +990,12 @@ g.trans {
 <rect rx="6" ry="6" x="-26" y="-40" width="52" height="80" class="key trans"/>
 <text x="0" y="0" class="key trans tap">▽</text>
 </g>
-<g transform="translate(433, 224) rotate(-30.0)" class="key held keypos-33">
-<rect rx="6" ry="6" x="-26" y="-40" width="52" height="80" class="key held"/>
-</g>
-<g transform="translate(498, 213) rotate(-15.0)" class="key trans keypos-34">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
+<g transform="translate(433, 224) rotate(-30.0)" class="key trans keypos-33">
+<rect rx="6" ry="6" x="-26" y="-40" width="52" height="80" class="key trans"/>
 <text x="0" y="0" class="key trans tap">▽</text>
+</g>
+<g transform="translate(498, 213) rotate(-15.0)" class="key held keypos-34">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key held"/>
 </g>
 <g transform="translate(560, 205)" class="key trans keypos-35">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
@@ -1118,19 +1118,19 @@ g.trans {
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
 <text x="0" y="0" class="key trans tap">▽</text>
 </g>
-<g transform="translate(230, 213) rotate(15.0)" class="key trans keypos-31">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
+<g transform="translate(230, 213) rotate(15.0)" class="key held keypos-31">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key held"/>
+</g>
+<g transform="translate(295, 224) rotate(30.0)" class="key trans keypos-32">
+<rect rx="6" ry="6" x="-26" y="-40" width="52" height="80" class="key trans"/>
 <text x="0" y="0" class="key trans tap">▽</text>
 </g>
-<g transform="translate(295, 224) rotate(30.0)" class="key held keypos-32">
-<rect rx="6" ry="6" x="-26" y="-40" width="52" height="80" class="key held"/>
-</g>
-<g transform="translate(433, 224) rotate(-30.0)" class="key held keypos-33">
-<rect rx="6" ry="6" x="-26" y="-40" width="52" height="80" class="key held"/>
-</g>
-<g transform="translate(498, 213) rotate(-15.0)" class="key trans keypos-34">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
+<g transform="translate(433, 224) rotate(-30.0)" class="key trans keypos-33">
+<rect rx="6" ry="6" x="-26" y="-40" width="52" height="80" class="key trans"/>
 <text x="0" y="0" class="key trans tap">▽</text>
+</g>
+<g transform="translate(498, 213) rotate(-15.0)" class="key held keypos-34">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key held"/>
 </g>
 <g transform="translate(560, 205)" class="key trans keypos-35">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
