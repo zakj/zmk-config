@@ -51,10 +51,10 @@ layers:
   - {t: '=', h: '$$mdi:apple-keyboard-control$$'}
   - _
   - {t: '-', h: +}
-  - ;
+  - {t: ;, h: '$$mdi:apple-keyboard-command$$'}
   - (
   - )
-  - '4'
+  - {t: '4', h: '$$mdi:apple-keyboard-command$$'}
   - '5'
   - '6'
   - ':'
@@ -82,12 +82,12 @@ layers:
   - $$tabler:bluetooth-x$$
   - PG UP
   - NEXT TAB
-  - UP ARROW
+  - $$tabler:arrow-up$$
   - PREV TAB
   - ''
   - {t: '$$mdi:rhombus$$', h: sticky}
   - $$tabler:volume-3$$
-  - {t: '$$tabler:volume-2$$', h: '$$mdi:apple-keyboard-option$$'}
+  - $$tabler:volume-2$$
   - {t: '$$tabler:volume$$', h: '$$mdi:apple-keyboard-command$$'}
   - $$tabler:brightness-up$$
   - PG DN
