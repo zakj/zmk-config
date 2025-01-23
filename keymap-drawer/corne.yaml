@@ -11,17 +11,17 @@ layers:
   - I
   - O
   - P
-  - A
+  - {t: A, h: '$$mdi:apple-keyboard-control$$'}
   - S
-  - {t: D, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: F, h: '$$mdi:apple-keyboard-command$$'}
+  - D
+  - F
   - G
   - H
-  - {t: J, h: '$$mdi:apple-keyboard-command$$'}
-  - {t: K, h: '$$mdi:apple-keyboard-option$$'}
+  - J
+  - K
   - L
   - ''''
-  - Z
+  - {t: Z, h: '$$mdi:apple-keyboard-shift$$'}
   - X
   - C
   - V
@@ -30,9 +30,9 @@ layers:
   - M
   - ','
   - .
-  - /
-  - {t: '$$mdi:keyboard-esc$$', h: '$$mdi:apple-keyboard-control$$'}
-  - $$mdi:apple-keyboard-shift$$
+  - {t: /, h: '$$mdi:apple-keyboard-shift$$'}
+  - $$mdi:apple-keyboard-option$$
+  - $$mdi:apple-keyboard-command$$
   - {t: '$$tabler:arrow-bar-to-right$$', h: sym}
   - {t: '$$tabler:corner-down-left$$', h: nav}
   - $$tabler:space$$
@@ -48,14 +48,14 @@ layers:
   - '8'
   - '9'
   - '|'
-  - {t: '=', h: +}
+  - {t: '=', h: '$$mdi:apple-keyboard-control$$'}
   - _
-  - {t: '-', h: '$$mdi:apple-keyboard-option$$'}
-  - {t: ;, h: '$$mdi:apple-keyboard-command$$'}
+  - {t: '-', h: +}
+  - ;
   - (
   - )
-  - {t: '4', h: '$$mdi:apple-keyboard-command$$'}
-  - {t: '5', h: '$$mdi:apple-keyboard-option$$'}
+  - '4'
+  - '5'
   - '6'
   - ':'
   - {t: '%', h: ^}
@@ -72,8 +72,8 @@ layers:
   - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
-  - '0'
   - {t: ▽, type: trans}
+  - '0'
   nav:
   - {t: '$$tabler:bluetooth$$', h: '3'}
   - {t: '$$tabler:bluetooth$$', h: '2'}
@@ -154,4 +154,7 @@ combos:
   l: [base]
 - p: [7, 8]
   k: $$tabler:backspace$$
+  l: [base, sym]
+- p: [1, 2]
+  k: $$mdi:keyboard-esc$$
   l: [base, sym]
