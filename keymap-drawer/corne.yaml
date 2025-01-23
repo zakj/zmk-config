@@ -32,11 +32,11 @@ layers:
   - .
   - {t: /, h: '$$mdi:apple-keyboard-shift$$'}
   - $$mdi:apple-keyboard-option$$
-  - $$mdi:apple-keyboard-command$$
   - {t: '$$tabler:arrow-bar-to-right$$', h: sym}
-  - {t: '$$tabler:corner-down-left$$', h: nav}
-  - $$tabler:space$$
-  - $$tabler:backspace$$
+  - $$mdi:apple-keyboard-command$$
+  - $$tabler:corner-down-left$$
+  - {t: '$$tabler:space$$', h: nav}
+  - Alt+$$tabler:backspace$$
   sym:
   - '!'
   - '@'
@@ -69,8 +69,8 @@ layers:
   - '3'
   - \
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - '0'
@@ -108,8 +108,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
   - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   ext:
   - F1
@@ -143,10 +143,10 @@ layers:
   - =>
   - ''
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {type: held}
   - {type: held}
   - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
 combos:
 - p: [31, 32]
