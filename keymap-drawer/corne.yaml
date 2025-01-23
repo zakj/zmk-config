@@ -14,10 +14,10 @@ layers:
   - {t: A, h: '$$mdi:apple-keyboard-control$$'}
   - S
   - D
-  - F
+  - {t: F, h: '$$mdi:apple-keyboard-command$$'}
   - G
   - H
-  - J
+  - {t: J, h: '$$mdi:apple-keyboard-command$$'}
   - K
   - L
   - ''''
