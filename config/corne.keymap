@@ -37,14 +37,6 @@
             require-prior-idle-ms = <50>;
         };
 
-        htl: holdtap_layer {
-            compatible = "zmk,behavior-hold-tap";
-            label = "Hold/tap layer";
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            bindings = <&mo>, <&to>;
-        };
-
         u_bootloader: u_bootloader {
             compatible = "zmk,behavior-tap-dance";
             label = "U_BOOTLOADER";
@@ -146,10 +138,10 @@
 
         base_layer {
             bindings = <
-  &kp Q         &kp W  &kp E     &kp R        &kp T        &kp Y      &kp U        &kp I      &kp O    &kp P
-  &hml LCTRL A  &kp S  &kp D     &hml LGUI F  &kp G        &kp H      &hmr RGUI J  &kp K      &kp L    &kp SQT
-  &hml LSHFT Z  &kp X  &kp C     &kp V        &kp B        &kp N      &kp M        &kp COMMA  &kp DOT  &hmr RSHFT SLASH
-                       &kp LALT  &kp LGUI     &lt 1 TAB    &lt 2 RET  &kp SPACE    &kp BSPC
+  &kp Q         &kp W  &kp E     &kp R        &kp T       &kp Y    &kp U        &kp I         &kp O    &kp P
+  &hml LCTRL A  &kp S  &kp D     &hml LGUI F  &kp G       &kp H    &hmr RGUI J  &kp K         &kp L    &kp SQT
+  &mt LSHFT Z   &kp X  &kp C     &kp V        &kp B       &kp N    &kp M        &kp COMMA     &kp DOT  &mt RSHFT SLASH
+                       &kp LALT  &lt 1 TAB    &kp LGUI    &kp RET  &lt 2 SPACE  &kp LA(BSPC)
             >;
         };
 
